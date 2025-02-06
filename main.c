@@ -3,14 +3,20 @@
 #include <string.h>
 #include "lista.h"
 
+#define HR 0
+#define MIN 1
+
 int main(){
 
     Lista *lista = (Lista*)malloc(sizeof(Lista));
     criarLista(lista);
 
-    inserirF(lista, "oi");
-    inserirI(lista, "tchau");
+    inserirF(lista, "oi", 0, 0);
+    inserirI(lista, "tchau", 0, 30);
     removerF(lista);
+
+    inserirF(lista, "um", 0, 40);
+    inserirF(lista, "dois", 0, 50);
 
     printf("%s\n", lista->sent->ant->task);
 
@@ -25,7 +31,12 @@ int main(){
     enfileirar(fila, "Cafe", 9, 0);
     enfileirar(fila, "Correr", 10, 0);
 
+    Item x = copiarItem(lista, 1);
+    Item y = copiarItem(lista, 3);
+
     esvaziarFila(fila, 1);
+
+    printf("- %s\n- %s %02hd:%02hd\n", x.task, y.task, y.time[HR], y.time[MIN]);
 
     deletarLista(lista);
 
