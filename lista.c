@@ -21,9 +21,9 @@ int listaVazia(Lista *l){
 }
 
 // Inserção no início (primeiro elemento)
-void inserirI(Lista *l, T data){
+void inserirI(Lista *l, T task){
     Node *novo = (point)malloc(sizeof(Node));   // Aloca espaço na memória para um novo nó
-    novo->data = data;                          // Atribui o dado do parâmetro ao conteúdo do nó    
+    novo->task = task;                          // Atribui o dado do parâmetro ao conteúdo do nó    
     novo->prox = l->sent->prox;                 // Próximo aponta para o, até então, primeiro elemento da lista
     novo->ant = l->sent;                        // Anterior aponta para o sentinela
     novo->prox->ant = novo;                     // Ponteiro "anterior" do antigo primeiro elemento, aponta para o novo nó
@@ -32,9 +32,9 @@ void inserirI(Lista *l, T data){
 }
 
 // Inserção no final (último elemento)
-void inserirF(Lista *l, T data){
+void inserirF(Lista *l, T task){
     Node *novo = (point)malloc(sizeof(Node));   // Aloca espaço na memória para um novo nó
-    novo->data = data;                          // Atribui o dado do parâmetro ao conteúdo do nó
+    novo->task = task;                          // Atribui o dado do parâmetro ao conteúdo do nó
     novo->prox = l->sent;                       // Próximo aponta para o sentinela
     novo->ant = l->sent->ant;                   // Anterior aponta para o, até então, últiimo elemento da lista
     novo->ant->prox = novo;                     // Ponteiro "próximo" do antigo último elemento, aponta para o novo nó
@@ -63,4 +63,85 @@ void removerF(Lista *l){
         free(temp);                        // Libera a memória alocada
         l->size--;                         // Decrementa o tamanho da lista
     }
+}
+
+void criarFila(Fila *f, int tam){
+    f->itens = (Item*)malloc(tam * sizeof(Item));
+    f->ini = 0;
+    f->fim = -1;
+    f->capacidade = tam;
+    f->size = 0;
+}
+
+int filaVazia(Fila *f){
+    return f->size == 0;
+}
+
+int filaCheia(Fila *f){
+    return f->size == f->capacidade;
+}
+
+void redimensionarFila(Fila *f){
+    f->capacidade *= 2;
+    f->itens = (Item*)realloc(f->itens, f->capacidade * sizeof(Item));
+
+    if(f->itens == NULL){
+        printf("Erro ao realocar memória.\n");
+        return;
+    }
+}
+
+void enfileirar(Fila *f, T new_task, H horas, H minutos){
+    if(filaCheia(f)){
+        redimensionarFila(f);
+    }
+
+    f->fim = (f->fim + 1) % f->capacidade;
+    f->itens[f->fim].task = new_task;
+    f->itens[f->fim].time[0] = horas;
+    f->itens[f->fim].time[1] = minutos;
+    f->size++;
+}
+
+Item desenfileirar(Fila *f){
+    Item temp;
+
+    if(filaVazia(f)){
+        temp.task = "Fila vazia.";
+        return temp;
+    }
+
+    temp = f->itens[f->ini];
+    f->ini = (f->ini + 1) % f->capacidade;
+    f->size--;
+    return temp;
+}
+
+void imprimeFila(Fila *f){
+    if(filaVazia(f)){
+        return;
+    }
+    
+    for(int i = 0; i < f->size; i++){
+        int idx = (f->ini + i) % f->capacidade;
+        printf("%s %02hd:%02hd\n", f->itens[idx].task, f->itens[idx].time[0], f->itens[idx].time[1]);
+    }
+}
+
+void esvaziarFila(Fila *f, short n){
+    if(filaVazia(f)){
+        return;
+    }
+    
+    while(!filaVazia(f)){
+        Item itm = desenfileirar(f);
+        if(n){
+            printf("%s %02hd:%02hd\n", itm.task, itm.time[0], itm.time[1]);
+        }
+    }
+}
+
+void destruirFila(Fila *f){
+    free(f->itens);
+    free(f);
 }
