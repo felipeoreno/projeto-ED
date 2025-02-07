@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include "lista.h"
 
+// A FAZER: remoção do meio da lista/deque com iteração para concluir tarefas
+
+
+
 void criarLista(Lista *l){
     Node *n = (point)malloc(sizeof(Node));  // Alocação de um ponteiro para o primeiro nó (sentinela)
     l->sent = n;                            // Define o primeiro nó "n" como sentinela
@@ -21,9 +25,11 @@ int listaVazia(Lista *l){
 }
 
 // Inserção no início (primeiro elemento)
-void inserirI(Lista *l, T task){
+void inserirI(Lista *l, T task, H horas, H minutos){
     Node *novo = (point)malloc(sizeof(Node));   // Aloca espaço na memória para um novo nó
-    novo->task = task;                          // Atribui o dado do parâmetro ao conteúdo do nó    
+    novo->task = task;                          // Atribui o dado do parâmetro ao conteúdo do nó
+    novo->time[0] = horas;
+    novo->time[1] = minutos;
     novo->prox = l->sent->prox;                 // Próximo aponta para o, até então, primeiro elemento da lista
     novo->ant = l->sent;                        // Anterior aponta para o sentinela
     novo->prox->ant = novo;                     // Ponteiro "anterior" do antigo primeiro elemento, aponta para o novo nó
@@ -32,9 +38,11 @@ void inserirI(Lista *l, T task){
 }
 
 // Inserção no final (último elemento)
-void inserirF(Lista *l, T task){
+void inserirF(Lista *l, T task, H horas, H minutos){
     Node *novo = (point)malloc(sizeof(Node));   // Aloca espaço na memória para um novo nó
     novo->task = task;                          // Atribui o dado do parâmetro ao conteúdo do nó
+    novo->time[0] = horas;
+    novo->time[1] = minutos;
     novo->prox = l->sent;                       // Próximo aponta para o sentinela
     novo->ant = l->sent->ant;                   // Anterior aponta para o, até então, últiimo elemento da lista
     novo->ant->prox = novo;                     // Ponteiro "próximo" do antigo último elemento, aponta para o novo nó
@@ -63,6 +71,20 @@ void removerF(Lista *l){
         free(temp);                        // Libera a memória alocada
         l->size--;                         // Decrementa o tamanho da lista
     }
+}
+
+Item copiarItem(Lista *l, unsigned n){
+    Node *temp = l->sent->prox;
+
+    for(int i = 1; i < n; i++){
+        temp = temp->prox;
+    }
+    Item copy;
+    copy.task = temp->task;
+    copy.time[0] = temp->time[0];
+    copy.time[1] = temp->time[1];
+
+    return copy;
 }
 
 void criarFila(Fila *f, int tam){

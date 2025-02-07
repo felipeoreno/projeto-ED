@@ -23,29 +23,9 @@ typedef struct {
     unsigned size; // Tamanho da lista
 } Lista;
 
-// Função para criar uma lista
-void criarLista(Lista *l);
-
-// Função para deletar uma lista
-void deletarLista(Lista *l);
-
-// Função para verificar se a lista está vazia
-int listaVazia(Lista *l);
-
-// Função para inserir um elemento no início da lista
-void inserirI(Lista *l, T task);
-
-// Função para inserir um elemento no final da lista
-void inserirF(Lista *l, T task);
-
-// Função para remover um elemento do início da lista
-void removerI(Lista *l);
-
-// Função para remover um elemento do final da lista
-void removerF(Lista *l);
 
 
-
+// Definição do tipo de dados dos itens do vetor da fila
 typedef struct {
     T task;              // String com o nome da tarefa
     H time[2];           // Vetor para armazenar horário (horas e minutos)
@@ -58,6 +38,29 @@ typedef struct {
     unsigned capacidade; // Tamanho máximo da fila
     unsigned size;       // Tamanho atual da fila
 } Fila;
+
+// Função para criar uma lista
+void criarLista(Lista *l);
+
+// Função para deletar uma lista
+void deletarLista(Lista *l);
+
+// Função para verificar se a lista está vazia
+int listaVazia(Lista *l);
+
+// Função para inserir um elemento no início da lista
+void inserirI(Lista *l, T task, H horas, H minutos);
+
+// Função para inserir um elemento no final da lista
+void inserirF(Lista *l, T task, H horas, H minutos);
+
+// Função para remover um elemento do início da lista
+void removerI(Lista *l);
+
+// Função para remover um elemento do final da lista
+void removerF(Lista *l);
+
+Item copiarItem(Lista *l, unsigned n);
 
 void criarFila(Fila *f, int tam);
 int filaVazia(Fila *f);
