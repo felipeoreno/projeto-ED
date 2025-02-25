@@ -2,10 +2,6 @@
 #include <stdio.h>
 #include "lista.h"
 
-// A FAZER: remoção do meio da lista/deque com iteração para concluir tarefas
-
-
-
 void criarLista(Lista *l){
     Node *n = (point)malloc(sizeof(Node));  // Alocação de um ponteiro para o primeiro nó (sentinela)
     l->sent = n;                            // Define o primeiro nó "n" como sentinela
@@ -71,6 +67,28 @@ void removerF(Lista *l){
         free(temp);                        // Libera a memória alocada
         l->size--;                         // Decrementa o tamanho da lista
     }
+}
+
+void removerM(Lista *l, unsigned n){
+    if(!n || n > l->size) // Finaliza a função caso n seja zero ou maior que o tamanho da lista
+        return;
+    Node *temp = l->sent;
+
+    // Se o elemento escolhido estiver antes ou na metade da lista a iteração segue no sentido do ponteiro prox,
+    // e se estiver depois da metade a iteração segue pelo sentido do ponteiro ant
+    if(n <= l->size / 2)
+        for(unsigned i = 1; i <= n; i++){
+            temp = temp->prox;
+        }
+    else
+        for(unsigned i = 0; i <= (l->size - n); i++){ // i começa em zero para fazer mais uma iteração
+            temp = temp->ant;
+        }
+
+    temp->ant->prox = temp->prox;      // Ajusta o ponteiro "próximo" do nó anterior, que apontará para o elemento seguinte
+    temp->prox->ant = temp->ant;       // Ajusta o ponteiro "anterior" do próximo nó, que apontará para o novo anterior
+    free(temp);                        // Libera a memória alocada
+    l->size--;
 }
 
 Item copiarItem(Lista *l, unsigned n){

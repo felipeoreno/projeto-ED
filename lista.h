@@ -60,6 +60,9 @@ void removerI(Lista *l);
 // Função para remover um elemento do final da lista
 void removerF(Lista *l);
 
+// Função para remover um elemento do meio da lista
+void removerM(Lista *l, unsigned n);
+
 Item copiarItem(Lista *l, unsigned n);
 
 void criarFila(Fila *f, int tam);
