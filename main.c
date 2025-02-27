@@ -1,7 +1,7 @@
 #include <gtk/gtk.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "../lista.h"
+#include "lista.h"
 
 // Variáveis globais para a lista de tarefas pendentes e a fila de concluídas
 Lista lista;
