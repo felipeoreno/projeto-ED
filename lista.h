@@ -12,8 +12,7 @@ typedef struct node_ {
     H time[2];           // Horário: [0]=hora, [1]=minuto
     struct node_ *prox;  // Ponteiro para o próximo elemento
     struct node_ *ant;   // Ponteiro para o elemento anterior
-};
-typedef struct node_ Node;  // Renomeia node
+}Node;
 
 typedef Node* point;
 
