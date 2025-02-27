@@ -7,15 +7,15 @@ typedef char* T;
 typedef short H;
 
 // Estrutura do nó da lista
-struct node_ {
-    T task;              // Dado armazenado no nó
-    H time[2];           // Vetor para armazenar horário (horas e minutos)
+typedef struct node_ {
+    T task;              // Descrição da tarefa
+    H time[2];           // Horário: [0]=hora, [1]=minuto
     struct node_ *prox;  // Ponteiro para o próximo elemento
     struct node_ *ant;   // Ponteiro para o elemento anterior
 };
 typedef struct node_ Node;  // Renomeia node
 
-typedef Node* point;  // Definição do tipo point como um ponteiro para node
+typedef Node* point;
 
 // Estrutura da lista com sentinela
 typedef struct {
@@ -23,20 +23,19 @@ typedef struct {
     unsigned size; // Tamanho da lista
 } Lista;
 
-
-
-// Definição do tipo de dados dos itens do vetor da fila
+// Estrutura do item (para a fila de tarefas concluídas)
 typedef struct {
-    T task;              // String com o nome da tarefa
-    H time[2];           // Vetor para armazenar horário (horas e minutos)
+    T task;    // Descrição da tarefa
+    H time[2]; // Horário: [0]=hora, [1]=minuto
 } Item;
 
+// Estrutura da fila
 typedef struct {
-    Item *itens;        // Vetor para armazenar os elementos
-    int ini;             // Índice do início da fila
-    int fim;             // Índice do fim da fila
-    unsigned capacidade; // Tamanho máximo da fila
-    unsigned size;       // Tamanho atual da fila
+    Item *itens;        // Vetor de itens
+    int ini;            // Índice do início da fila
+    int fim;            // Índice do fim da fila
+    unsigned capacidade; // Capacidade máxima
+    unsigned size;      // Número atual de itens
 } Fila;
 
 // Função para criar uma lista
@@ -65,6 +64,7 @@ void removerM(Lista *l, unsigned n);
 
 Item copiarItem(Lista *l, unsigned n);
 
+// Protótipos das funções da fila
 void criarFila(Fila *f, int tam);
 int filaVazia(Fila *f);
 int filaCheia(Fila *f);
