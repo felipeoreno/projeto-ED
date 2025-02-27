@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "lista.h"
 
+// Inicializa a lista
 void criarLista(Lista *l) {
     Node *n = (point)malloc(sizeof(Node));  // Alocação de um ponteiro para o primeiro nó (sentinela)
     l->sent = n;                            // Define o primeiro nó "n" como sentinela
@@ -9,6 +10,7 @@ void criarLista(Lista *l) {
     l->size = 0;                            // Define como 0 o tamanho da lista
 }
 
+// Remove e libera a memória dos elementos da lista e, por fim, da estrutura
 void deletarLista(Lista *l){
     while(!listaVazia(l)){
         removerI(l);        // Enquanto a lista não estiver vazia, remove cada um de seus elementos
@@ -70,6 +72,7 @@ void removerF(Lista *l){
     }
 }
 
+// Remoção no meio da lista (elemento escolhido através de sua posição na estrutura)
 void removerM(Lista *l, unsigned n){
     if(!n || n > l->size) // Finaliza a função caso n seja zero ou maior que o tamanho da lista
         return;
@@ -92,11 +95,15 @@ void removerM(Lista *l, unsigned n){
     l->size--;
 }
 
-Item copiarItem(Lista *l, unsigned n) {
+// Copia um determinado item da lista, o qual deve ser acessado a partir de sua posição
+Item copiarItem(Lista *l, unsigned n){
     Node *temp = l->sent->prox;
+
+    // Acesso pela iteração
     for (unsigned i = 1; i < n; i++) {
         temp = temp->prox;
     }
+
     Item copy;
     // Aqui, usamos a mesma string
     copy.task = temp->task;
@@ -107,74 +114,81 @@ Item copiarItem(Lista *l, unsigned n) {
 
 // Funções da fila
 
-void criarFila(Fila *f, int tam) {
-    f->itens = (Item*)malloc(tam * sizeof(Item));
-    f->ini = 0;
-    f->fim = -1;
-    f->capacidade = tam;
-    f->size = 0;
+// Cria uma fila com capacidade inicial especificada
+void criarFila(Fila *f, int tam){
+    f->itens = (Item*)malloc(tam * sizeof(Item)); // Aloca espaço para os itens da fila
+    f->ini = 0;                                   // Inicializa o índice do início da fila
+    f->fim = -1;                                  // Inicializa o índice do fim da fila
+    f->capacidade = tam;                          // Define a capacidade da fila
+    f->size = 0;                                  // Define o tamanho inicial da fila como 0
 }
 
-int filaVazia(Fila *f) {
-    return (f->size == 0);
+// Verifica se a fila está vazia
+int filaVazia(Fila *f){
+    return (f->size == 0); // Retorna 1 se a fila estiver vazia, caso contrário retorna 0
 }
 
-int filaCheia(Fila *f) {
-    return (f->size == f->capacidade);
+// Verifica se a fila está cheia
+int filaCheia(Fila *f){
+    return (f->size == f->capacidade); // Retorna 1 se a fila estiver cheia, caso contrário retorna 0
 }
 
-void redimensionarFila(Fila *f) {
-    f->capacidade *= 2;
-    f->itens = (Item*)realloc(f->itens, f->capacidade * sizeof(Item));
+// Redimensiona a capacidade da fila para o dobro do tamanho atual
+void redimensionarFila(Fila *f){
+    f->capacidade *= 2;                                                // Dobra a capacidade da fila
+    f->itens = (Item*)realloc(f->itens, f->capacidade * sizeof(Item)); // Realoca memória para os itens da fila
     if (f->itens == NULL) {
-        printf("Erro ao realocar memória.\n");
+        printf("Erro ao realocar memória.\n");                         // Imprime mensagem de erro se a realocação falhar e retorna
         return;
     }
 }
 
-void enfileirar(Fila *f, T new_task, H horas, H minutos) {
+// Adiciona um novo item à fila
+void enfileirar(Fila *f, T new_task, H horas, H minutos){
     if (filaCheia(f))
-        redimensionarFila(f);
-    f->fim = (f->fim + 1) % f->capacidade;
-    f->itens[f->fim].task = new_task;
-    f->itens[f->fim].time[0] = horas;
-    f->itens[f->fim].time[1] = minutos;
-    f->size++;
+        redimensionarFila(f);              // Redimensiona a fila se estiver cheia
+    f->fim = (f->fim + 1) % f->capacidade; // Atualiza o índice do fim da fila
+    f->itens[f->fim].task = new_task;      // Atribui a nova tarefa ao item no fim da fila
+    f->itens[f->fim].time[0] = horas;      // Atribui as horas ao item no fim da fila
+    f->itens[f->fim].time[1] = minutos;    // Atribui os minutos ao item no fim da fila
+    f->size++;                             // Incrementa o tamanho da fila
 }
 
-Item desenfileirar(Fila *f) {
+// Remove e retorna o item no início da fila
+Item desenfileirar(Fila *f){
     Item temp;
     if (filaVazia(f)) {
-        temp.task = "Fila vazia.";
+        temp.task = "Fila vazia.";         // Retorna uma mensagem se a fila estiver vazia
         return temp;
     }
-    temp = f->itens[f->ini];
-    f->ini = (f->ini + 1) % f->capacidade;
-    f->size--;
-    return temp;
+    temp = f->itens[f->ini];               // Armazena o item no início da fila
+    f->ini = (f->ini + 1) % f->capacidade; // Atualiza o índice do início da fila
+    f->size--;                             // Decrementa o tamanho da fila
+    return temp;                           // Retorna o item removido
 }
 
-void imprimeFila(Fila *f) {
-    if (filaVazia(f))
+void imprimeFila(Fila *f){
+    if (filaVazia(f))       // Retorna se a fila estiver vazia
         return;
     for (int i = 0; i < f->size; i++) {
-        int idx = (f->ini + i) % f->capacidade;
-        printf("%s %02hd:%02hd\n", f->itens[idx].task, f->itens[idx].time[0], f->itens[idx].time[1]);
+        int idx = (f->ini + i) % f->capacidade;     // Adequa i para funcionar corretamente como índice da fila 
+        printf("%s %02hd:%02hd\n", f->itens[idx].task, f->itens[idx].time[0], f->itens[idx].time[1]);   // Imprime a tarefa e seu respectivo horário
     }
 }
 
-void esvaziarFila(Fila *f, short n) {
-    if (filaVazia(f))
+// Esvazia a fila sem destruí-la; para a chave n != 0, imprime cada elemento da estrutura
+void esvaziarFila(Fila *f, short n){
+    if (filaVazia(f))       // Retorna se a fila estver vazia
         return;
     while (!filaVazia(f)) {
-        Item itm = desenfileirar(f);
+        Item itm = desenfileirar(f);    // Remove até acabarem todos os elementos da fila
         if (n) {
             printf("%s %02hd:%02hd\n", itm.task, itm.time[0], itm.time[1]);
         }
     }
 }
 
-void destruirFila(Fila *f) {
+void destruirFila(Fila *f){
     free(f->itens);
-    // Caso f tenha sido alocado dinamicamente, libere-o também.
+    // Caso f tenha sido alocado dinamicamente, libere-o também
 }

@@ -3,7 +3,7 @@
 
 // Definição do tipo de dados, no caso, T como um ponteiro para char
 typedef char* T;
-// Definição do tipo de dados H, inteiro usado para manipular horários
+// Definição do tipo de dados H, inteiro usado para manipular horários no programa
 typedef short H;
 
 // Estrutura do nó da lista
@@ -12,7 +12,7 @@ typedef struct node_ {
     H time[2];           // Horário: [0]=hora, [1]=minuto
     struct node_ *prox;  // Ponteiro para o próximo elemento
     struct node_ *ant;   // Ponteiro para o elemento anterior
-}Node;
+} Node;
 
 typedef Node* point;
 
@@ -37,30 +37,15 @@ typedef struct {
     unsigned size;      // Número atual de itens
 } Fila;
 
-// Função para criar uma lista
+// Protótipos das funções da lista
 void criarLista(Lista *l);
-
-// Função para deletar uma lista
 void deletarLista(Lista *l);
-
-// Função para verificar se a lista está vazia
 int listaVazia(Lista *l);
-
-// Função para inserir um elemento no início da lista
 void inserirI(Lista *l, T task, H horas, H minutos);
-
-// Função para inserir um elemento no final da lista
 void inserirF(Lista *l, T task, H horas, H minutos);
-
-// Função para remover um elemento do início da lista
 void removerI(Lista *l);
-
-// Função para remover um elemento do final da lista
 void removerF(Lista *l);
-
-// Função para remover um elemento do meio da lista
 void removerM(Lista *l, unsigned n);
-
 Item copiarItem(Lista *l, unsigned n);
 
 // Protótipos das funções da fila
@@ -73,5 +58,7 @@ Item desenfileirar(Fila *f);
 void imprimeFila(Fila *f);
 void esvaziarFila(Fila *f, short n);
 void destruirFila(Fila *f);
+
+// Documentação das funções em lista.c
 
 #endif // LISTA_H
