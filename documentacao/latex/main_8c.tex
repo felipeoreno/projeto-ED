@@ -1,10 +1,10 @@
-\doxysection{Referência do Arquivo C\+:/\+Users/\+Vinicius Souza/\+Downloads/projeto-\/\+ED/main.c}
-\hypertarget{main_8c}{}\label{main_8c}\index{C:/Users/Vinicius Souza/Downloads/projeto-\/ED/main.c@{C:/Users/Vinicius Souza/Downloads/projeto-\/ED/main.c}}
+\doxysection{C\+:/\+Users/\+T-\/\+Gamer/\+One\+Drive/Área de Trabalho/\+Trabalho ED/projeto-\/\+ED/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{C:/Users/T-\/Gamer/OneDrive/Área de Trabalho/Trabalho ED/projeto-\/ED/main.c@{C:/Users/T-\/Gamer/OneDrive/Área de Trabalho/Trabalho ED/projeto-\/ED/main.c}}
 {\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include "{}lista.\+h"{}}\newline
-\doxysubsubsection*{Funções}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{main_8c_acefd375e4c8a6189f385bac4c8c84e15}{mostrar\+\_\+erro}} (const gchar \texorpdfstring{$\ast$}{*}mensagem)
@@ -23,7 +23,7 @@ void \mbox{\hyperlink{main_8c_a35b97703d08de8bdc16a14b0b65ead38}{on\+\_\+voltar\
 \item 
 int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Variáveis}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_lista}{Lista}} \mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}}
@@ -44,348 +44,49 @@ Gtk\+Widget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a0cceb33c9d0c5b9
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Funções}
+\doxysubsection{Function Documentation}
 \Hypertarget{main_8c_a5a447d86c3d2b1175ec4c6f56166a5ec}\index{main.c@{main.c}!adicionar@{adicionar}}
 \index{adicionar@{adicionar}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{adicionar()}{adicionar()}}
 {\footnotesize\ttfamily \label{main_8c_a5a447d86c3d2b1175ec4c6f56166a5ec} 
 void adicionar (\begin{DoxyParamCaption}\item[{Gtk\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{gpointer}]{data}{}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ gchar\ *title\_text\ =\ gtk\_entry\_get\_text(GTK\_ENTRY(\mbox{\hyperlink{main_8c_a557699180664bcc86884032e3d7c8978}{entry\_title}}));}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ gchar\ *task\_text\ =\ gtk\_entry\_get\_text(GTK\_ENTRY(\mbox{\hyperlink{main_8c_a9a21e510a15b76077d85bf22944f4842}{entry\_task}}));}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ gchar\ *time\_str\ =\ gtk\_entry\_get\_text(GTK\_ENTRY(\mbox{\hyperlink{main_8c_afe5e6c0402b80d2877e94ae413a57a09}{entry\_hour\_minute}}));}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (g\_strcmp0(title\_text,\ \textcolor{stringliteral}{"{}"{}})\ ==\ 0)\ \{}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_acefd375e4c8a6189f385bac4c8c84e15}{mostrar\_erro}}(\textcolor{stringliteral}{"{}Erro:\ O\ título\ da\ tarefa\ não\ pode\ estar\ vazio!"{}});}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00063\ \ \ \ \ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (g\_strcmp0(task\_text,\ \textcolor{stringliteral}{"{}"{}})\ ==\ 0)\ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_acefd375e4c8a6189f385bac4c8c84e15}{mostrar\_erro}}(\textcolor{stringliteral}{"{}Erro:\ A\ descrição\ da\ tarefa\ não\ pode\ estar\ vazia!"{}});}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00067\ \ \ \ \ \}}
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ hour,\ minute;}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (sscanf(time\_str,\ \textcolor{stringliteral}{"{}\%d:\%d"{}},\ \&hour,\ \&minute)\ !=\ 2\ ||\ hour\ <\ 0\ ||\ hour\ >\ 23\ ||\ minute\ <\ 0\ ||\ minute\ >\ 59)\ \{}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_acefd375e4c8a6189f385bac4c8c84e15}{mostrar\_erro}}(\textcolor{stringliteral}{"{}Erro:\ Hora\ ou\ minuto\ inválido!\ Use\ o\ formato\ HH:MM\ (ex:\ 14:30)."{}});}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00072\ \ \ \ \ \}}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ Concatena\ título\ e\ descrição\ no\ formato\ "{}Título:\ Descrição"{}}}
-\DoxyCodeLine{00075\ \ \ \ \ gchar\ *full\_task\ =\ g\_strdup\_printf(\textcolor{stringliteral}{"{}\%s:\ \%s"{}},\ title\_text,\ task\_text);}
-\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{lista_8c_aad6f064cf4a6993d185ef790ae9cd4fb}{inserirF}}(\&\mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}},\ full\_task,\ hour,\ minute);}
-\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{main_8c_a39ceabe5a6150fdc589d6391c54d3fdd}{atualizar\_lista\_box}}();}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ Limpa\ os\ campos\ de\ entrada\ após\ adicionar\ a\ tarefa}}
-\DoxyCodeLine{00080\ \ \ \ \ gtk\_entry\_set\_text(GTK\_ENTRY(\mbox{\hyperlink{main_8c_a557699180664bcc86884032e3d7c8978}{entry\_title}}),\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00081\ \ \ \ \ gtk\_entry\_set\_text(GTK\_ENTRY(\mbox{\hyperlink{main_8c_a9a21e510a15b76077d85bf22944f4842}{entry\_task}}),\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00082\ \ \ \ \ gtk\_entry\_set\_text(GTK\_ENTRY(\mbox{\hyperlink{main_8c_afe5e6c0402b80d2877e94ae413a57a09}{entry\_hour\_minute}}),\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00083\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_a39ceabe5a6150fdc589d6391c54d3fdd}\index{main.c@{main.c}!atualizar\_lista\_box@{atualizar\_lista\_box}}
 \index{atualizar\_lista\_box@{atualizar\_lista\_box}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{atualizar\_lista\_box()}{atualizar\_lista\_box()}}
 {\footnotesize\ttfamily \label{main_8c_a39ceabe5a6150fdc589d6391c54d3fdd} 
 void atualizar\+\_\+lista\+\_\+box (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Remove\ todos\ os\ filhos\ atuais\ do\ list\_box}}
-\DoxyCodeLine{00029\ \ \ \ \ GList\ *children\ =\ gtk\_container\_get\_children(GTK\_CONTAINER(\mbox{\hyperlink{main_8c_a0cceb33c9d0c5b9d65955e3400957903}{list\_box}}));}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}\ (GList\ *iter\ =\ children;\ iter\ !=\ NULL;\ iter\ =\ g\_list\_next(iter))}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ gtk\_widget\_destroy(GTK\_WIDGET(iter-\/>data));}
-\DoxyCodeLine{00032\ \ \ \ \ g\_list\_free(children);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Percorre\ a\ lista\ de\ tarefas\ pendentes}}
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{lista_8h_ad0e58c8d86e5c89dc77bfde1c568971c}{Node}}\ *temp\ =\ \mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}}.sent-\/>prox;}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{while}\ (temp\ !=\ \mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}}.sent)\ \{}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Considerando\ que\ a\ tarefa\ está\ armazenada\ no\ formato\ "{}Título:\ Descrição"{},}}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ separamos\ o\ título\ (antes\ dos\ dois\ pontos)}}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ gchar\ **parts\ =\ g\_strsplit(temp-\/>\mbox{\hyperlink{structnode___a64df6f132f4b4d2e69c86a662b314b91}{task}},\ \textcolor{stringliteral}{"{}:"{}},\ 2);}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ gchar\ *titulo\ =\ parts[0];}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ GtkListBoxRow\ e\ insere\ o\ título}}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ GtkWidget\ *row\ =\ gtk\_list\_box\_row\_new();}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ GtkWidget\ *label\ =\ gtk\_label\_new(titulo);}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ gtk\_container\_add(GTK\_CONTAINER(row),\ label);}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ gtk\_list\_box\_insert(GTK\_LIST\_BOX(\mbox{\hyperlink{main_8c_a0cceb33c9d0c5b9d65955e3400957903}{list\_box}}),\ row,\ -\/1);}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ gtk\_widget\_show\_all(row);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ g\_strfreev(parts);}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>\mbox{\hyperlink{structnode___a24923762d5223cd3be20904952540707}{prox}};}
-\DoxyCodeLine{00051\ \ \ \ \ \}}
-\DoxyCodeLine{00052\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{main.c@{main.c}!main@{main}}
 \index{main@{main}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily \label{main_8c_a0ddf1224851353fc92bfbff6f499fa97} 
 int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00177\ \ \ \ \ gtk\_init(\&argc,\ \&argv);}
-\DoxyCodeLine{00178\ }
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//\ Carrega\ o\ CSS\ (se\ houver)}}
-\DoxyCodeLine{00180\ \ \ \ \ GtkCssProvider\ *cssProvider\ =\ gtk\_css\_provider\_new();}
-\DoxyCodeLine{00181\ \ \ \ \ gtk\_css\_provider\_load\_from\_path(cssProvider,\ \textcolor{stringliteral}{"{}css/style.css"{}},\ NULL);}
-\DoxyCodeLine{00182\ \ \ \ \ gtk\_style\_context\_add\_provider\_for\_screen(gdk\_screen\_get\_default(),}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_STYLE\_PROVIDER(cssProvider),}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_STYLE\_PROVIDER\_PRIORITY\_USER);}
-\DoxyCodeLine{00185\ \ \ \ \ g\_object\_unref(cssProvider);}
-\DoxyCodeLine{00186\ }
-\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{lista_8c_aafe1f66fe68075cde37d804f12af36ca}{criarLista}}(\&\mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}});}
-\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{lista_8c_af6448f2fa9c826b3af5a95f12febc9db}{criarFila}}(\&\mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}},\ 5);}
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{/*\ =====\ JANELA\ INICIAL\ =====\ */}}
-\DoxyCodeLine{00191\ \ \ \ \ \mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}}\ =\ gtk\_window\_new(GTK\_WINDOW\_TOPLEVEL);}
-\DoxyCodeLine{00192\ \ \ \ \ gtk\_window\_set\_title(GTK\_WINDOW(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}}),\ \textcolor{stringliteral}{"{}Bem-\/vindo"{}});}
-\DoxyCodeLine{00193\ \ \ \ \ gtk\_container\_set\_border\_width(GTK\_CONTAINER(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}}),\ 10);}
-\DoxyCodeLine{00194\ \ \ \ \ gtk\_window\_set\_default\_size(GTK\_WINDOW(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}}),\ 600,\ 400);}
-\DoxyCodeLine{00195\ \ \ \ \ gtk\_widget\_set\_name(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}},\ \textcolor{stringliteral}{"{}welcome-\/window"{}});}
-\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//\ Conecta\ o\ sinal\ "{}delete-\/event"{}\ para\ encerrar\ a\ aplicação\ ao\ fechar\ a\ janela}}
-\DoxyCodeLine{00197\ \ \ \ \ g\_signal\_connect(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}},\ \textcolor{stringliteral}{"{}delete-\/event"{}},\ G\_CALLBACK(gtk\_main\_quit),\ NULL);}
-\DoxyCodeLine{00198\ }
-\DoxyCodeLine{00199\ \ \ \ \ GtkWidget\ *init\_vbox\ =\ gtk\_box\_new(GTK\_ORIENTATION\_VERTICAL,\ 5);}
-\DoxyCodeLine{00200\ \ \ \ \ gtk\_container\_add(GTK\_CONTAINER(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}}),\ init\_vbox);}
-\DoxyCodeLine{00201\ }
-\DoxyCodeLine{00202\ \ \ \ \ GtkWidget\ *welcome\_label\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}<b>Bem-\/vindo\ a\ sua\ To\ Do\ List</b>"{}});}
-\DoxyCodeLine{00203\ \ \ \ \ gtk\_label\_set\_use\_markup(GTK\_LABEL(welcome\_label),\ TRUE);}
-\DoxyCodeLine{00204\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(init\_vbox),\ welcome\_label,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00205\ }
-\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//\ Carrega\ e\ redimensiona\ a\ imagem\ de\ boas-\/vindas}}
-\DoxyCodeLine{00207\ \ \ \ \ GError\ *error\ =\ NULL;}
-\DoxyCodeLine{00208\ \ \ \ \ GdkPixbuf\ *pixbuf\ =\ gdk\_pixbuf\_new\_from\_file(\textcolor{stringliteral}{"{}imagem/check-\/list.png"{}},\ \&error);}
-\DoxyCodeLine{00209\ \ \ \ \ GtkWidget\ *welcome\_image;}
-\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordflow}{if}\ (!pixbuf)\ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ g\_warning(\textcolor{stringliteral}{"{}Erro\ ao\ carregar\ imagem:\ \%s"{}},\ error-\/>message);}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ welcome\_image\ =\ gtk\_image\_new();}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ g\_error\_free(error);}
-\DoxyCodeLine{00214\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ orig\_width\ =\ gdk\_pixbuf\_get\_width(pixbuf);}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ orig\_height\ =\ gdk\_pixbuf\_get\_height(pixbuf);}
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_width\ =\ 200;}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_height\ =\ orig\_height\ *\ new\_width\ /\ orig\_width;}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ GdkPixbuf\ *scaled\_pixbuf\ =\ gdk\_pixbuf\_scale\_simple(pixbuf,\ new\_width,\ new\_height,\ GDK\_INTERP\_BILINEAR);}
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ welcome\_image\ =\ gtk\_image\_new\_from\_pixbuf(scaled\_pixbuf);}
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ g\_object\_unref(pixbuf);}
-\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ g\_object\_unref(scaled\_pixbuf);}
-\DoxyCodeLine{00223\ \ \ \ \ \}}
-\DoxyCodeLine{00224\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(init\_vbox),\ welcome\_image,\ TRUE,\ TRUE,\ 0);}
-\DoxyCodeLine{00225\ }
-\DoxyCodeLine{00226\ \ \ \ \ \textcolor{comment}{//\ Botões\ "{}Entrar"{}\ e\ "{}Sair"{}\ na\ janela\ inicial}}
-\DoxyCodeLine{00227\ \ \ \ \ GtkWidget\ *hbox\_buttons\ =\ gtk\_box\_new(GTK\_ORIENTATION\_HORIZONTAL,\ 5);}
-\DoxyCodeLine{00228\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(init\_vbox),\ hbox\_buttons,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00229\ \ \ \ \ GtkWidget\ *btn\_entrar\ =\ gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"{}Entrar"{}});}
-\DoxyCodeLine{00230\ \ \ \ \ GtkWidget\ *btn\_sair\ \ \ =\ gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"{}Sair"{}});}
-\DoxyCodeLine{00231\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(hbox\_buttons),\ btn\_entrar,\ TRUE,\ TRUE,\ 0);}
-\DoxyCodeLine{00232\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(hbox\_buttons),\ btn\_sair,\ TRUE,\ TRUE,\ 0);}
-\DoxyCodeLine{00233\ \ \ \ \ g\_signal\_connect(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}},\ \textcolor{stringliteral}{"{}destroy"{}},\ G\_CALLBACK(gtk\_main\_quit),\ NULL);}
-\DoxyCodeLine{00234\ \ \ \ \ g\_signal\_connect(btn\_sair,\ \textcolor{stringliteral}{"{}clicked"{}},\ G\_CALLBACK(gtk\_main\_quit),\ NULL);}
-\DoxyCodeLine{00235\ \ \ \ \ g\_signal\_connect(btn\_entrar,\ \textcolor{stringliteral}{"{}clicked"{}},\ G\_CALLBACK(\mbox{\hyperlink{main_8c_a7b9df2848d188f60ae04366d6c3add0a}{on\_entrar\_clicked}}),\ NULL);}
-\DoxyCodeLine{00236\ }
-\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{/*\ =====\ JANELA\ PRINCIPAL\ (To\ Do\ List)\ =====\ */}}
-\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}\ =\ gtk\_window\_new(GTK\_WINDOW\_TOPLEVEL);}
-\DoxyCodeLine{00239\ \ \ \ \ gtk\_window\_set\_title(GTK\_WINDOW(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}),\ \textcolor{stringliteral}{"{}To\ Do\ List"{}});}
-\DoxyCodeLine{00240\ \ \ \ \ gtk\_container\_set\_border\_width(GTK\_CONTAINER(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}),\ 10);}
-\DoxyCodeLine{00241\ \ \ \ \ gtk\_window\_set\_default\_size(GTK\_WINDOW(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}),\ 800,\ 600);}
-\DoxyCodeLine{00242\ \ \ \ \ gtk\_widget\_set\_name(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}},\ \textcolor{stringliteral}{"{}main-\/window"{}});}
-\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//\ Conecta\ o\ sinal\ "{}delete-\/event"{}\ para\ encerrar\ a\ aplicação\ ao\ fechar\ a\ janela}}
-\DoxyCodeLine{00244\ \ \ \ \ g\_signal\_connect(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}},\ \textcolor{stringliteral}{"{}delete-\/event"{}},\ G\_CALLBACK(gtk\_main\_quit),\ NULL);}
-\DoxyCodeLine{00245\ }
-\DoxyCodeLine{00246\ \ \ \ \ GtkWidget\ *main\_vbox\ =\ gtk\_box\_new(GTK\_ORIENTATION\_VERTICAL,\ 5);}
-\DoxyCodeLine{00247\ \ \ \ \ gtk\_container\_add(GTK\_CONTAINER(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}),\ main\_vbox);}
-\DoxyCodeLine{00248\ }
-\DoxyCodeLine{00249\ \ \ \ \ GtkWidget\ *label\_title\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}<b>To\ Do\ List</b>"{}});}
-\DoxyCodeLine{00250\ \ \ \ \ gtk\_label\_set\_use\_markup(GTK\_LABEL(label\_title),\ TRUE);}
-\DoxyCodeLine{00251\ \ \ \ \ gtk\_style\_context\_add\_class(gtk\_widget\_get\_style\_context(label\_title),\ \textcolor{stringliteral}{"{}title"{}});}
-\DoxyCodeLine{00252\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ label\_title,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00253\ }
-\DoxyCodeLine{00254\ \ \ \ \ \textcolor{comment}{//\ Campos\ de\ entrada\ para\ nova\ tarefa}}
-\DoxyCodeLine{00255\ \ \ \ \ GtkWidget\ *label\_task\_title\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}Título\ da\ Tarefa:"{}});}
-\DoxyCodeLine{00256\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ label\_task\_title,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00257\ \ \ \ \ \mbox{\hyperlink{main_8c_a557699180664bcc86884032e3d7c8978}{entry\_title}}\ =\ gtk\_entry\_new();}
-\DoxyCodeLine{00258\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ \mbox{\hyperlink{main_8c_a557699180664bcc86884032e3d7c8978}{entry\_title}},\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00259\ }
-\DoxyCodeLine{00260\ \ \ \ \ GtkWidget\ *label\_task\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}Descrição\ da\ Tarefa:"{}});}
-\DoxyCodeLine{00261\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ label\_task,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{main_8c_a9a21e510a15b76077d85bf22944f4842}{entry\_task}}\ =\ gtk\_entry\_new();}
-\DoxyCodeLine{00263\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ \mbox{\hyperlink{main_8c_a9a21e510a15b76077d85bf22944f4842}{entry\_task}},\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00264\ }
-\DoxyCodeLine{00265\ \ \ \ \ GtkWidget\ *label\_time\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}Hora\ (HH:MM):"{}});}
-\DoxyCodeLine{00266\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ label\_time,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{main_8c_afe5e6c0402b80d2877e94ae413a57a09}{entry\_hour\_minute}}\ =\ gtk\_entry\_new();}
-\DoxyCodeLine{00268\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ \mbox{\hyperlink{main_8c_afe5e6c0402b80d2877e94ae413a57a09}{entry\_hour\_minute}},\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00269\ }
-\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{//\ Botão\ para\ adicionar\ a\ tarefa}}
-\DoxyCodeLine{00271\ \ \ \ \ GtkWidget\ *btn\_add\ =\ gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"{}Adicionar\ Tarefa"{}});}
-\DoxyCodeLine{00272\ \ \ \ \ g\_signal\_connect(btn\_add,\ \textcolor{stringliteral}{"{}clicked"{}},\ G\_CALLBACK(\mbox{\hyperlink{main_8c_a5a447d86c3d2b1175ec4c6f56166a5ec}{adicionar}}),\ NULL);}
-\DoxyCodeLine{00273\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ btn\_add,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00274\ }
-\DoxyCodeLine{00275\ \ \ \ \ \textcolor{comment}{//\ Adiciona\ um\ rótulo\ "{}Tarefas\ Pendentes:"{}\ antes\ do\ list\_box}}
-\DoxyCodeLine{00276\ \ \ \ \ GtkWidget\ *label\_pendentes\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}<b>Tarefas\ Pendentes:</b>"{}});}
-\DoxyCodeLine{00277\ \ \ \ \ gtk\_label\_set\_use\_markup(GTK\_LABEL(label\_pendentes),\ TRUE);}
-\DoxyCodeLine{00278\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ label\_pendentes,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00279\ }
-\DoxyCodeLine{00280\ \ \ \ \ GtkWidget\ *label\_explicao\ =\ gtk\_label\_new(\textcolor{stringliteral}{"{}<b>Clique\ nelas\ para\ remover,\ concluir\ e\ ver\ mais\ detalhes</b>"{}});}
-\DoxyCodeLine{00281\ \ \ \ \ gtk\_label\_set\_use\_markup(GTK\_LABEL(label\_explicao),\ TRUE);}
-\DoxyCodeLine{00282\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ label\_explicao,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00283\ }
-\DoxyCodeLine{00284\ \ \ \ \ \textcolor{comment}{//\ Cria\ o\ GtkListBox\ para\ exibir\ os\ títulos\ das\ tarefas\ pendentes}}
-\DoxyCodeLine{00285\ \ \ \ \ \mbox{\hyperlink{main_8c_a0cceb33c9d0c5b9d65955e3400957903}{list\_box}}\ =\ gtk\_list\_box\_new();}
-\DoxyCodeLine{00286\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ \mbox{\hyperlink{main_8c_a0cceb33c9d0c5b9d65955e3400957903}{list\_box}},\ TRUE,\ TRUE,\ 0);}
-\DoxyCodeLine{00287\ \ \ \ \ g\_signal\_connect(\mbox{\hyperlink{main_8c_a0cceb33c9d0c5b9d65955e3400957903}{list\_box}},\ \textcolor{stringliteral}{"{}row-\/activated"{}},\ G\_CALLBACK(\mbox{\hyperlink{main_8c_ac3aa665e2a7f40e3b16c15a55f8afca8}{on\_task\_row\_activated}}),\ NULL);}
-\DoxyCodeLine{00288\ }
-\DoxyCodeLine{00289\ \ \ \ \ \textcolor{comment}{//\ Botão\ para\ visualizar\ as\ tarefas\ concluídas}}
-\DoxyCodeLine{00290\ \ \ \ \ GtkWidget\ *btn\_ver\_concluidas\ =\ gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"{}Ver\ Tarefas\ Concluídas"{}});}
-\DoxyCodeLine{00291\ \ \ \ \ g\_signal\_connect(btn\_ver\_concluidas,\ \textcolor{stringliteral}{"{}clicked"{}},\ G\_CALLBACK(\mbox{\hyperlink{main_8c_adec06b08ecdb6c662110e27e31e6aff9}{on\_ver\_concluidas\_clicked}}),\ NULL);}
-\DoxyCodeLine{00292\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ btn\_ver\_concluidas,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00293\ }
-\DoxyCodeLine{00294\ \ \ \ \ \textcolor{comment}{//\ Botão\ para\ voltar\ à\ janela\ inicial}}
-\DoxyCodeLine{00295\ \ \ \ \ GtkWidget\ *btn\_voltar\ =\ gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"{}Voltar\ para\ Página\ Inicial"{}});}
-\DoxyCodeLine{00296\ \ \ \ \ g\_signal\_connect(btn\_voltar,\ \textcolor{stringliteral}{"{}clicked"{}},\ G\_CALLBACK(\mbox{\hyperlink{main_8c_a35b97703d08de8bdc16a14b0b65ead38}{on\_voltar\_clicked}}),\ NULL);}
-\DoxyCodeLine{00297\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(main\_vbox),\ btn\_voltar,\ FALSE,\ FALSE,\ 0);}
-\DoxyCodeLine{00298\ }
-\DoxyCodeLine{00299\ \ \ \ \ gtk\_widget\_show\_all(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}});}
-\DoxyCodeLine{00300\ \ \ \ \ gtk\_main();}
-\DoxyCodeLine{00301\ }
-\DoxyCodeLine{00302\ \ \ \ \ \mbox{\hyperlink{lista_8c_a5f361369d62b0bc829f8f4bb6e17f503}{deletarLista}}(\&\mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}});}
-\DoxyCodeLine{00303\ \ \ \ \ \mbox{\hyperlink{lista_8c_a34f0151756a90636664ada06910cfb8b}{destruirFila}}(\&\mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}});}
-\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00305\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_acefd375e4c8a6189f385bac4c8c84e15}\index{main.c@{main.c}!mostrar\_erro@{mostrar\_erro}}
 \index{mostrar\_erro@{mostrar\_erro}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{mostrar\_erro()}{mostrar\_erro()}}
 {\footnotesize\ttfamily \label{main_8c_acefd375e4c8a6189f385bac4c8c84e15} 
 void mostrar\+\_\+erro (\begin{DoxyParamCaption}\item[{const gchar \texorpdfstring{$\ast$}{*}}]{mensagem}{}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00020\ \ \ \ \ GtkWidget\ *dialog\ =\ gtk\_message\_dialog\_new(NULL,\ GTK\_DIALOG\_MODAL,}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_MESSAGE\_ERROR,\ GTK\_BUTTONS\_OK,\ \textcolor{stringliteral}{"{}\%s"{}},\ mensagem);}
-\DoxyCodeLine{00022\ \ \ \ \ gtk\_dialog\_run(GTK\_DIALOG(dialog));}
-\DoxyCodeLine{00023\ \ \ \ \ gtk\_widget\_destroy(dialog);}
-\DoxyCodeLine{00024\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_a7b9df2848d188f60ae04366d6c3add0a}\index{main.c@{main.c}!on\_entrar\_clicked@{on\_entrar\_clicked}}
 \index{on\_entrar\_clicked@{on\_entrar\_clicked}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{on\_entrar\_clicked()}{on\_entrar\_clicked()}}
 {\footnotesize\ttfamily \label{main_8c_a7b9df2848d188f60ae04366d6c3add0a} 
 void on\+\_\+entrar\+\_\+clicked (\begin{DoxyParamCaption}\item[{Gtk\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{gpointer}]{data}{}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00167\ \ \ \ \ gtk\_widget\_hide(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}});}
-\DoxyCodeLine{00168\ \ \ \ \ gtk\_widget\_show\_all(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}});}
-\DoxyCodeLine{00169\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_ac3aa665e2a7f40e3b16c15a55f8afca8}\index{main.c@{main.c}!on\_task\_row\_activated@{on\_task\_row\_activated}}
 \index{on\_task\_row\_activated@{on\_task\_row\_activated}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{on\_task\_row\_activated()}{on\_task\_row\_activated()}}
 {\footnotesize\ttfamily \label{main_8c_ac3aa665e2a7f40e3b16c15a55f8afca8} 
 void on\+\_\+task\+\_\+row\+\_\+activated (\begin{DoxyParamCaption}\item[{Gtk\+List\+Box \texorpdfstring{$\ast$}{*}}]{box}{, }\item[{Gtk\+List\+Box\+Row \texorpdfstring{$\ast$}{*}}]{row}{, }\item[{gpointer}]{user\+\_\+data}{}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ Obtém\ o\ índice\ (base\ 0)\ da\ linha\ clicada\ e\ converte\ para\ índice\ (base\ 1)}}
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ gtk\_list\_box\_row\_get\_index(row)\ +\ 1;}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Percorre\ a\ lista\ até\ chegar\ à\ tarefa\ correspondente}}
-\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{lista_8h_ad0e58c8d86e5c89dc77bfde1c568971c}{Node}}\ *temp\ =\ \mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}}.sent-\/>prox;}
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ index;\ i++)}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>\mbox{\hyperlink{structnode___a24923762d5223cd3be20904952540707}{prox}};}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ diálogo\ para\ exibir\ os\ detalhes\ da\ tarefa}}
-\DoxyCodeLine{00096\ \ \ \ \ GtkWidget\ *dialog\ =\ gtk\_dialog\_new\_with\_buttons(\textcolor{stringliteral}{"{}Detalhes\ da\ Tarefa"{}},}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_WINDOW(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}),}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_DIALOG\_MODAL\ |\ GTK\_DIALOG\_DESTROY\_WITH\_PARENT,}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\_Excluir"{}},\ GTK\_RESPONSE\_REJECT,}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\_Concluir"{}},\ GTK\_RESPONSE\_ACCEPT,}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\_Cancelar"{}},\ GTK\_RESPONSE\_CANCEL,}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NULL);}
-\DoxyCodeLine{00103\ \ \ \ \ GtkWidget\ *content\_area\ =\ gtk\_dialog\_get\_content\_area(GTK\_DIALOG(dialog));}
-\DoxyCodeLine{00104\ \ \ \ \ gchar\ *info\ =\ g\_strdup\_printf(\textcolor{stringliteral}{"{}Detalhes:\(\backslash\)n\%s\(\backslash\)nHorário:\ \%02d:\%02d"{}},}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp-\/>\mbox{\hyperlink{structnode___a64df6f132f4b4d2e69c86a662b314b91}{task}},\ temp-\/>\mbox{\hyperlink{structnode___a2e41721addabc99d7231045faeafd6c3}{time}}[0],\ temp-\/>\mbox{\hyperlink{structnode___a2e41721addabc99d7231045faeafd6c3}{time}}[1]);}
-\DoxyCodeLine{00106\ \ \ \ \ GtkWidget\ *label\ =\ gtk\_label\_new(info);}
-\DoxyCodeLine{00107\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(content\_area),\ label,\ TRUE,\ TRUE,\ 10);}
-\DoxyCodeLine{00108\ \ \ \ \ gtk\_widget\_show\_all(dialog);}
-\DoxyCodeLine{00109\ \ \ \ \ g\_free(info);}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ response\ =\ gtk\_dialog\_run(GTK\_DIALOG(dialog));}
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{if}\ (response\ ==\ GTK\_RESPONSE\_REJECT)\ \{\ \textcolor{comment}{//\ Excluir\ a\ tarefa}}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lista_8c_a61fa8d6b750970805e4cc662897fb80d}{removerM}}(\&\mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}},\ index);}
-\DoxyCodeLine{00114\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (response\ ==\ GTK\_RESPONSE\_ACCEPT)\ \{\ \textcolor{comment}{//\ Concluir\ a\ tarefa}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_item}{Item}}\ item\ =\ \mbox{\hyperlink{lista_8c_a58e545d7673602bbd2fd1cef0a85256f}{copiarItem}}(\&\mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}},\ index);}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lista_8c_a61fa8d6b750970805e4cc662897fb80d}{removerM}}(\&\mbox{\hyperlink{main_8c_a6bbf26eb93826aa088f0edfd09bf333f}{lista}},\ index);}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lista_8c_a6aec3b42762e7b52be059dfcba2ff1be}{enfileirar}}(\&\mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}},\ g\_strdup(item.\mbox{\hyperlink{struct_item_a64df6f132f4b4d2e69c86a662b314b91}{task}}),\ item.\mbox{\hyperlink{struct_item_a2e41721addabc99d7231045faeafd6c3}{time}}[0],\ item.\mbox{\hyperlink{struct_item_a2e41721addabc99d7231045faeafd6c3}{time}}[1]);}
-\DoxyCodeLine{00118\ \ \ \ \ \}}
-\DoxyCodeLine{00119\ \ \ \ \ gtk\_widget\_destroy(dialog);}
-\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{main_8c_a39ceabe5a6150fdc589d6391c54d3fdd}{atualizar\_lista\_box}}();}
-\DoxyCodeLine{00121\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_adec06b08ecdb6c662110e27e31e6aff9}\index{main.c@{main.c}!on\_ver\_concluidas\_clicked@{on\_ver\_concluidas\_clicked}}
 \index{on\_ver\_concluidas\_clicked@{on\_ver\_concluidas\_clicked}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{on\_ver\_concluidas\_clicked()}{on\_ver\_concluidas\_clicked()}}
 {\footnotesize\ttfamily \label{main_8c_adec06b08ecdb6c662110e27e31e6aff9} 
 void on\+\_\+ver\+\_\+concluidas\+\_\+clicked (\begin{DoxyParamCaption}\item[{Gtk\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{gpointer}]{data}{}\end{DoxyParamCaption})}
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00125\ \ \ \ \ GtkWidget\ *dialog\ =\ gtk\_dialog\_new\_with\_buttons(\textcolor{stringliteral}{"{}Tarefas\ Concluídas"{}},}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_WINDOW(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}}),}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTK\_DIALOG\_MODAL\ |\ GTK\_DIALOG\_DESTROY\_WITH\_PARENT,}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\_OK"{}},\ GTK\_RESPONSE\_OK,}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NULL);}
-\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ Aumenta\ o\ tamanho\ da\ janela\ de\ tarefas\ concluídas}}
-\DoxyCodeLine{00131\ \ \ \ \ gtk\_window\_set\_default\_size(GTK\_WINDOW(dialog),\ 600,\ 400);}
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00133\ \ \ \ \ GtkWidget\ *content\_area\ =\ gtk\_dialog\_get\_content\_area(GTK\_DIALOG(dialog));}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//\ Cria\ uma\ janela\ rolável\ e\ um\ GtkListBox\ para\ listar\ as\ tarefas\ concluídas}}
-\DoxyCodeLine{00136\ \ \ \ \ GtkWidget\ *scrolled\ =\ gtk\_scrolled\_window\_new(NULL,\ NULL);}
-\DoxyCodeLine{00137\ \ \ \ \ gtk\_scrolled\_window\_set\_policy(GTK\_SCROLLED\_WINDOW(scrolled),\ GTK\_POLICY\_AUTOMATIC,\ GTK\_POLICY\_AUTOMATIC);}
-\DoxyCodeLine{00138\ \ \ \ \ gtk\_box\_pack\_start(GTK\_BOX(content\_area),\ scrolled,\ TRUE,\ TRUE,\ 10);}
-\DoxyCodeLine{00139\ }
-\DoxyCodeLine{00140\ \ \ \ \ GtkWidget\ *concluded\_list\_box\ =\ gtk\_list\_box\_new();}
-\DoxyCodeLine{00141\ \ \ \ \ gtk\_container\_add(GTK\_CONTAINER(scrolled),\ concluded\_list\_box);}
-\DoxyCodeLine{00142\ }
-\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}}.size;\ i++)\ \{}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ (\mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}}.ini\ +\ i)\ \%\ \mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}}.capacidade;}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ gchar\ *task\_info\ =\ g\_strdup\_printf(\textcolor{stringliteral}{"{}\%d)\ \%s\ -\/\ \%02d:\%02d"{}},\ i+1,\ \mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}}.itens[idx].task,}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}}.itens[idx].time[0],\ \mbox{\hyperlink{main_8c_a560c277c6f644cd9d793dfaf79f0afb4}{fila}}.itens[idx].time[1]);}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ GtkWidget\ *row\ =\ gtk\_list\_box\_row\_new();}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ GtkWidget\ *label\ =\ gtk\_label\_new(task\_info);}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Define\ margens\ para\ um\ melhor\ espaçamento}}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ gtk\_widget\_set\_margin\_start(label,\ 10);}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ gtk\_widget\_set\_margin\_end(label,\ 10);}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ gtk\_widget\_set\_margin\_top(label,\ 5);}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ gtk\_widget\_set\_margin\_bottom(label,\ 5);}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ gtk\_container\_add(GTK\_CONTAINER(row),\ label);}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ gtk\_list\_box\_insert(GTK\_LIST\_BOX(concluded\_list\_box),\ row,\ -\/1);}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ gtk\_widget\_show\_all(row);}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ g\_free(task\_info);}
-\DoxyCodeLine{00158\ \ \ \ \ \}}
-\DoxyCodeLine{00159\ }
-\DoxyCodeLine{00160\ \ \ \ \ gtk\_widget\_show\_all(dialog);}
-\DoxyCodeLine{00161\ \ \ \ \ gtk\_dialog\_run(GTK\_DIALOG(dialog));}
-\DoxyCodeLine{00162\ \ \ \ \ gtk\_widget\_destroy(dialog);}
-\DoxyCodeLine{00163\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8c_a35b97703d08de8bdc16a14b0b65ead38}\index{main.c@{main.c}!on\_voltar\_clicked@{on\_voltar\_clicked}}
 \index{on\_voltar\_clicked@{on\_voltar\_clicked}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{on\_voltar\_clicked()}{on\_voltar\_clicked()}}
@@ -393,16 +94,8 @@ void on\+\_\+ver\+\_\+concluidas\+\_\+clicked (\begin{DoxyParamCaption}\item[{Gt
 void on\+\_\+voltar\+\_\+clicked (\begin{DoxyParamCaption}\item[{Gtk\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{gpointer}]{data}{}\end{DoxyParamCaption})}
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00172\ \ \ \ \ gtk\_widget\_hide(\mbox{\hyperlink{main_8c_a2f71a642764c9d2721c305c59ae18346}{main\_window}});}
-\DoxyCodeLine{00173\ \ \ \ \ gtk\_widget\_show\_all(\mbox{\hyperlink{main_8c_a1ec82ed728ad13ee84a109aacf479a57}{initial\_window}});}
-\DoxyCodeLine{00174\ \}}
 
-\end{DoxyCode}
-
-
-\doxysubsection{Variáveis}
+\doxysubsection{Variable Documentation}
 \Hypertarget{main_8c_afe5e6c0402b80d2877e94ae413a57a09}\index{main.c@{main.c}!entry\_hour\_minute@{entry\_hour\_minute}}
 \index{entry\_hour\_minute@{entry\_hour\_minute}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{entry\_hour\_minute}{entry\_hour\_minute}}

@@ -1,0 +1,58 @@
+\doxysection{C\+:/\+Users/\+T-\/\+Gamer/\+One\+Drive/Área de Trabalho/\+Trabalho ED/projeto-\/\+ED Directory Reference}
+\hypertarget{dir_afa342d5041a482941b07f58730d9d8c}{}\label{dir_afa342d5041a482941b07f58730d9d8c}\index{C:/Users/T-\/Gamer/OneDrive/Área de Trabalho/Trabalho ED/projeto-\/ED Directory Reference@{C:/Users/T-\/Gamer/OneDrive/Área de Trabalho/Trabalho ED/projeto-\/ED Directory Reference}}
+\doxysubsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{lista_8c}{lista.\+c}}
+\item 
+file \mbox{\hyperlink{lista_8h}{lista.\+h}}
+\item 
+file \mbox{\hyperlink{main_8c}{main.\+c}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{README.md_autotoc_md1}{}\doxysubsection{\texorpdfstring{Descrição do Projeto}{Descrição do Projeto}}\label{README.md_autotoc_md1}
+Este projeto consiste em uma To-\/\+Do List desenvolvida em C, utilizando listas duplamente encadeadas para o gerenciamento de tarefas. A interface gráfica foi implementada com a biblioteca GTK, para uma experiência visual intuitiva.\hypertarget{README.md_autotoc_md2}{}\doxysubsection{\texorpdfstring{Funcionalidades}{Funcionalidades}}\label{README.md_autotoc_md2}
+
+\begin{DoxyItemize}
+\item ➕ {\bfseries{Adicionar tarefas}} com descrição e horário.
+\item ❌ {\bfseries{Remover tarefas}} da lista.
+\item ✅ {\bfseries{Marcar tarefas como concluídas.}}
+\item 📋 {\bfseries{Exibir tarefas pendentes e concluídas separadamente.}}
+\item 🎨 {\bfseries{Interface estilizada}} com CSS para melhora o visual.
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md3}{}\doxysubsection{\texorpdfstring{Tecnologias Utilizadas}{Tecnologias Utilizadas}}\label{README.md_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Linguagem}}\+: C
+\item {\bfseries{Biblioteca Gráfica}}\+: GTK
+\item {\bfseries{Estrutura de Dados}}\+: Listas duplamente encadeadas e Filas Circulares Dinâmicas
+\item {\bfseries{Estilização}}\+: CSS
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md4}{}\doxysubsection{\texorpdfstring{Estruturas de Dados Utilizadas}{Estruturas de Dados Utilizadas}}\label{README.md_autotoc_md4}
+\hypertarget{README.md_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Lista Duplamente Encadeada}{Lista Duplamente Encadeada}}\label{README.md_autotoc_md5}
+Implementada para armazenar e gerenciar as tarefas.
+
+
+\begin{DoxyItemize}
+\item Utiliza um nó (\doxylink{lista_8h_ad0e58c8d86e5c89dc77bfde1c568971c}{Node}) contendo\+:
+\begin{DoxyItemize}
+\item Uma tarefa ({\ttfamily task})
+\item Um horário ({\ttfamily time\mbox{[}2\mbox{]}})
+\item Ponteiros para o próximo e anterior nó.
+\end{DoxyItemize}
+\item Possui uma célula sentinela para facilitar a manipulação da lista.
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Fila Circular Dinâmica}{Fila Circular Dinâmica}}\label{README.md_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Baseada em um vetor dinâmico ({\ttfamily \doxylink{struct_item}{Item}\mbox{[}\mbox{]}}).
+\item Implementa redimensionamento dinâmico quando atinge a capacidade.
+\item Gerencia os índices {\ttfamily ini} e {\ttfamily fim} para controle de inserção e remoção de maneira circular.
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md7}{}\doxysubsection{\texorpdfstring{Como Executar}{Como Executar}}\label{README.md_autotoc_md7}
+\hypertarget{README.md_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Requisitos}{Requisitos}}\label{README.md_autotoc_md8}
+Antes de rodar o projeto, certifique-\/se de ter instalado\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GCC}} (Compilador C)
+\item {\bfseries{GTK}} (Interface gráfica) 
+\end{DoxyItemize}

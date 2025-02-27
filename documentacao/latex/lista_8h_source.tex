@@ -1,13 +1,13 @@
 \doxysection{lista.\+h}
-\hypertarget{lista_8h_source}{}\label{lista_8h_source}\index{C:/Users/Vinicius Souza/Downloads/projeto-\/ED/lista.h@{C:/Users/Vinicius Souza/Downloads/projeto-\/ED/lista.h}}
-\mbox{\hyperlink{lista_8h}{Ir para a documentação desse arquivo.}}
+\hypertarget{lista_8h_source}{}\label{lista_8h_source}\index{C:/Users/T-\/Gamer/OneDrive/Área de Trabalho/Trabalho ED/projeto-\/ED/lista.h@{C:/Users/T-\/Gamer/OneDrive/Área de Trabalho/Trabalho ED/projeto-\/ED/lista.h}}
+\mbox{\hyperlink{lista_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LISTA\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LISTA\_H}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{comment}{//\ Definição\ do\ tipo\ de\ dados,\ no\ caso,\ T\ como\ um\ ponteiro\ para\ char}}
 \DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}};}
-\DoxyCodeLine{00006\ \textcolor{comment}{//\ Definição\ do\ tipo\ de\ dados\ H,\ inteiro\ usado\ para\ manipular\ horários}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Definição\ do\ tipo\ de\ dados\ H,\ inteiro\ usado\ para\ manipular\ horários\ no\ programa}}
 \DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}};}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{comment}{//\ Estrutura\ do\ nó\ da\ lista}}
@@ -16,7 +16,7 @@
 \DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ \mbox{\hyperlink{structnode___a2e41721addabc99d7231045faeafd6c3}{time}}[2];\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Horário:\ [0]=hora,\ [1]=minuto}}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode__}{node\_}}\ *\mbox{\hyperlink{structnode___a24923762d5223cd3be20904952540707}{prox}};\ \ \textcolor{comment}{//\ Ponteiro\ para\ o\ próximo\ elemento}}
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode__}{node\_}}\ *\mbox{\hyperlink{structnode___aa2fd49a828800a317680c2942ef54e4c}{ant}};\ \ \ \textcolor{comment}{//\ Ponteiro\ para\ o\ elemento\ anterior}}
-\DoxyCodeLine{00015\ \}\mbox{\hyperlink{lista_8h_ad0e58c8d86e5c89dc77bfde1c568971c}{Node}};}
+\DoxyCodeLine{00015\ \}\ \mbox{\hyperlink{lista_8h_ad0e58c8d86e5c89dc77bfde1c568971c}{Node}};}
 \DoxyCodeLine{00016\ }
 \DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{lista_8h_ad0e58c8d86e5c89dc77bfde1c568971c}{Node}}*\ \mbox{\hyperlink{lista_8h_a75873c015eba71fdc478c1123358884a}{point}};}
 \DoxyCodeLine{00018\ }
@@ -41,43 +41,30 @@
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{struct_fila_a245260f6f74972558f61b85227df5aae}{size}};\ \ \ \ \ \ \textcolor{comment}{//\ Número\ atual\ de\ itens}}
 \DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{struct_fila}{Fila}};}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \textcolor{comment}{//\ Função\ para\ criar\ uma\ lista}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Protótipos\ das\ funções\ da\ lista}}
 \DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_aafe1f66fe68075cde37d804f12af36ca}{criarLista}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{comment}{//\ Função\ para\ deletar\ uma\ lista}}
-\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a5f361369d62b0bc829f8f4bb6e17f503}{deletarLista}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \textcolor{comment}{//\ Função\ para\ verificar\ se\ a\ lista\ está\ vazia}}
-\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{lista_8h_a358274d43cd46ccfa897d5937773b204}{listaVazia}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{comment}{//\ Função\ para\ inserir\ um\ elemento\ no\ início\ da\ lista}}
-\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a6a2f2bdb6c5771c0d4baa0f69ee4aaf1}{inserirI}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}}\ task,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ horas,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ minutos);}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \textcolor{comment}{//\ Função\ para\ inserir\ um\ elemento\ no\ final\ da\ lista}}
-\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_aad6f064cf4a6993d185ef790ae9cd4fb}{inserirF}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}}\ task,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ horas,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ minutos);}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \textcolor{comment}{//\ Função\ para\ remover\ um\ elemento\ do\ início\ da\ lista}}
-\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_aadb963287ba576f19e5897d6be27a220}{removerI}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{comment}{//\ Função\ para\ remover\ um\ elemento\ do\ final\ da\ lista}}
-\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a3a7016c6980dccebac2f5ee2a40b613c}{removerF}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \textcolor{comment}{//\ Função\ para\ remover\ um\ elemento\ do\ meio\ da\ lista}}
-\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a61fa8d6b750970805e4cc662897fb80d}{removerM}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \textcolor{keywordtype}{unsigned}\ n);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a5f361369d62b0bc829f8f4bb6e17f503}{deletarLista}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{lista_8h_a358274d43cd46ccfa897d5937773b204}{listaVazia}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a6a2f2bdb6c5771c0d4baa0f69ee4aaf1}{inserirI}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}}\ task,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ horas,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ minutos);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_aad6f064cf4a6993d185ef790ae9cd4fb}{inserirF}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}}\ task,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ horas,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ minutos);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_aadb963287ba576f19e5897d6be27a220}{removerI}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a3a7016c6980dccebac2f5ee2a40b613c}{removerF}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a61fa8d6b750970805e4cc662897fb80d}{removerM}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \textcolor{keywordtype}{unsigned}\ n);}
+\DoxyCodeLine{00049\ \mbox{\hyperlink{struct_item}{Item}}\ \mbox{\hyperlink{lista_8h_a58e545d7673602bbd2fd1cef0a85256f}{copiarItem}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \textcolor{keywordtype}{unsigned}\ n);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ Protótipos\ das\ funções\ da\ fila}}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_af6448f2fa9c826b3af5a95f12febc9db}{criarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \textcolor{keywordtype}{int}\ tam);}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{lista_8h_ade7b9a12324f4d1425f2bb626d67b45f}{filaVazia}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{lista_8h_a9197f05e4e8b457c003cab57bcb7aad6}{filaCheia}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a94703dc41b18a61a48e9a5084fd6b774}{redimensionarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a6aec3b42762e7b52be059dfcba2ff1be}{enfileirar}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}}\ new\_task,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ horas,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ minutos);}
+\DoxyCodeLine{00057\ \mbox{\hyperlink{struct_item}{Item}}\ \mbox{\hyperlink{lista_8h_abaa7a64d6b164783555a7d67a6159164}{desenfileirar}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a93184205ebb7cd1aa114c710ecc01e44}{imprimeFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a8fea4fe6f0d358f67c02cb1c362f10cc}{esvaziarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \textcolor{keywordtype}{short}\ n);}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a34f0151756a90636664ada06910cfb8b}{destruirFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ Documentação\ das\ funções\ em\ lista.c}}
 \DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \mbox{\hyperlink{struct_item}{Item}}\ \mbox{\hyperlink{lista_8h_a58e545d7673602bbd2fd1cef0a85256f}{copiarItem}}(\mbox{\hyperlink{struct_lista}{Lista}}\ *l,\ \textcolor{keywordtype}{unsigned}\ n);}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \textcolor{comment}{//\ Protótipos\ das\ funções\ da\ fila}}
-\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_af6448f2fa9c826b3af5a95f12febc9db}{criarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \textcolor{keywordtype}{int}\ tam);}
-\DoxyCodeLine{00068\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{lista_8h_ade7b9a12324f4d1425f2bb626d67b45f}{filaVazia}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
-\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{lista_8h_a9197f05e4e8b457c003cab57bcb7aad6}{filaCheia}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
-\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a94703dc41b18a61a48e9a5084fd6b774}{redimensionarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
-\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a6aec3b42762e7b52be059dfcba2ff1be}{enfileirar}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \mbox{\hyperlink{lista_8h_a5a02f25b1851b59021ba315671ff9702}{T}}\ new\_task,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ horas,\ \mbox{\hyperlink{lista_8h_a9396d02c8c102463b14fcdc562685c75}{H}}\ minutos);}
-\DoxyCodeLine{00072\ \mbox{\hyperlink{struct_item}{Item}}\ \mbox{\hyperlink{lista_8h_abaa7a64d6b164783555a7d67a6159164}{desenfileirar}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
-\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a93184205ebb7cd1aa114c710ecc01e44}{imprimeFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
-\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a8fea4fe6f0d358f67c02cb1c362f10cc}{esvaziarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \textcolor{keywordtype}{short}\ n);}
-\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista_8h_a34f0151756a90636664ada06910cfb8b}{destruirFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LISTA\_H}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LISTA\_H}}
 
 \end{DoxyCode}
