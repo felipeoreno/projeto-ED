@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacao: Código-Fonte de C:/Users/Vinicius Souza/Downloads/projeto-ED/lista.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacao<span id="projectnumber">&#160;4.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_5051e657ae7f70b1870106dfe22c0ce6.html">Vinicius Souza</a></li><li class="navelem"><a class="el" href="dir_82df3f2d49beb93a7c075d4564b11090.html">Downloads</a></li><li class="navelem"><a class="el" href="dir_2d55f59db1d386f9ce1f5aaed5d2f06d.html">projeto-ED</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">lista.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lista_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LISTA_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LISTA_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Definição do tipo de dados, no caso, T como um ponteiro para char</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">    5</a></span><span class="keyword">typedef</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Definição do tipo de dados H, inteiro usado para manipular horários</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">    7</a></span><span class="keyword">typedef</span> <span class="keywordtype">short</span> <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Estrutura do nó da lista</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structnode__.html">   10</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structnode__.html">node_</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">   11</a></span>    <a class="code hl_typedef" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a> <a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>;              <span class="comment">// Descrição da tarefa</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">   12</a></span>    <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> <a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[2];           <span class="comment">// Horário: [0]=hora, [1]=minuto</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structnode__.html#a24923762d5223cd3be20904952540707">   13</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structnode__.html">node_</a> *<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;  <span class="comment">// Ponteiro para o próximo elemento</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">   14</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structnode__.html">node_</a> *<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;   <span class="comment">// Ponteiro para o elemento anterior</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="lista_8h.html#ad0e58c8d86e5c89dc77bfde1c568971c">   15</a></span>}<a class="code hl_typedef" href="lista_8h.html#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>;</div>
+</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="lista_8h.html#a75873c015eba71fdc478c1123358884a">   17</a></span><span class="keyword">typedef</span> <a class="code hl_typedef" href="lista_8h.html#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>* <a class="code hl_typedef" href="lista_8h.html#a75873c015eba71fdc478c1123358884a">point</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Estrutura da lista com sentinela</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_lista.html">   20</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">   21</a></span>    <a class="code hl_typedef" href="lista_8h.html#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;    <span class="comment">// Ponteiro para o nó sentinela</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">   22</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>; <span class="comment">// Tamanho da lista</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <a class="code hl_struct" href="struct_lista.html">Lista</a>;</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// Estrutura do item (para a fila de tarefas concluídas)</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_item.html">   26</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">   27</a></span>    <a class="code hl_typedef" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a> <a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>;    <span class="comment">// Descrição da tarefa</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">   28</a></span>    <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> <a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[2]; <span class="comment">// Horário: [0]=hora, [1]=minuto</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <a class="code hl_struct" href="struct_item.html">Item</a>;</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// Estrutura da fila</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_fila.html">   32</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">   33</a></span>    <a class="code hl_struct" href="struct_item.html">Item</a> *<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>;        <span class="comment">// Vetor de itens</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">   34</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a>;            <span class="comment">// Índice do início da fila</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">   35</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>;            <span class="comment">// Índice do fim da fila</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">   36</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>; <span class="comment">// Capacidade máxima</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">   37</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>;      <span class="comment">// Número atual de itens</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <a class="code hl_struct" href="struct_fila.html">Fila</a>;</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Função para criar uma lista</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#aafe1f66fe68075cde37d804f12af36ca">criarLista</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// Função para deletar uma lista</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a5f361369d62b0bc829f8f4bb6e17f503">deletarLista</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// Função para verificar se a lista está vazia</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">int</span> <a class="code hl_function" href="lista_8h.html#a358274d43cd46ccfa897d5937773b204">listaVazia</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// Função para inserir um elemento no início da lista</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a6a2f2bdb6c5771c0d4baa0f69ee4aaf1">inserirI</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l, <a class="code hl_typedef" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a> task, <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> horas, <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> minutos);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// Função para inserir um elemento no final da lista</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#aad6f064cf4a6993d185ef790ae9cd4fb">inserirF</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l, <a class="code hl_typedef" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a> task, <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> horas, <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> minutos);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// Função para remover um elemento do início da lista</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#aadb963287ba576f19e5897d6be27a220">removerI</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// Função para remover um elemento do final da lista</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a3a7016c6980dccebac2f5ee2a40b613c">removerF</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// Função para remover um elemento do meio da lista</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a61fa8d6b750970805e4cc662897fb80d">removerM</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l, <span class="keywordtype">unsigned</span> n);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_struct" href="struct_item.html">Item</a> <a class="code hl_function" href="lista_8h.html#a58e545d7673602bbd2fd1cef0a85256f">copiarItem</a>(<a class="code hl_struct" href="struct_lista.html">Lista</a> *l, <span class="keywordtype">unsigned</span> n);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// Protótipos das funções da fila</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#af6448f2fa9c826b3af5a95f12febc9db">criarFila</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f, <span class="keywordtype">int</span> tam);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">int</span> <a class="code hl_function" href="lista_8h.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">int</span> <a class="code hl_function" href="lista_8h.html#a9197f05e4e8b457c003cab57bcb7aad6">filaCheia</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a94703dc41b18a61a48e9a5084fd6b774">redimensionarFila</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a6aec3b42762e7b52be059dfcba2ff1be">enfileirar</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f, <a class="code hl_typedef" href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a> new_task, <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> horas, <a class="code hl_typedef" href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a> minutos);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><a class="code hl_struct" href="struct_item.html">Item</a> <a class="code hl_function" href="lista_8h.html#abaa7a64d6b164783555a7d67a6159164">desenfileirar</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a93184205ebb7cd1aa114c710ecc01e44">imprimeFila</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a8fea4fe6f0d358f67c02cb1c362f10cc">esvaziarFila</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f, <span class="keywordtype">short</span> n);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a34f0151756a90636664ada06910cfb8b">destruirFila</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// LISTA_H</span></div>
+<div class="ttc" id="alista_8h_html_a34f0151756a90636664ada06910cfb8b"><div class="ttname"><a href="lista_8h.html#a34f0151756a90636664ada06910cfb8b">destruirFila</a></div><div class="ttdeci">void destruirFila(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:177</div></div>
+<div class="ttc" id="alista_8h_html_a358274d43cd46ccfa897d5937773b204"><div class="ttname"><a href="lista_8h.html#a358274d43cd46ccfa897d5937773b204">listaVazia</a></div><div class="ttdeci">int listaVazia(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:19</div></div>
+<div class="ttc" id="alista_8h_html_a3a7016c6980dccebac2f5ee2a40b613c"><div class="ttname"><a href="lista_8h.html#a3a7016c6980dccebac2f5ee2a40b613c">removerF</a></div><div class="ttdeci">void removerF(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:62</div></div>
+<div class="ttc" id="alista_8h_html_a58e545d7673602bbd2fd1cef0a85256f"><div class="ttname"><a href="lista_8h.html#a58e545d7673602bbd2fd1cef0a85256f">copiarItem</a></div><div class="ttdeci">Item copiarItem(Lista *l, unsigned n)</div><div class="ttdef"><b>Definição</b> lista.c:95</div></div>
+<div class="ttc" id="alista_8h_html_a5a02f25b1851b59021ba315671ff9702"><div class="ttname"><a href="lista_8h.html#a5a02f25b1851b59021ba315671ff9702">T</a></div><div class="ttdeci">char * T</div><div class="ttdef"><b>Definição</b> lista.h:5</div></div>
+<div class="ttc" id="alista_8h_html_a5f361369d62b0bc829f8f4bb6e17f503"><div class="ttname"><a href="lista_8h.html#a5f361369d62b0bc829f8f4bb6e17f503">deletarLista</a></div><div class="ttdeci">void deletarLista(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:12</div></div>
+<div class="ttc" id="alista_8h_html_a61fa8d6b750970805e4cc662897fb80d"><div class="ttname"><a href="lista_8h.html#a61fa8d6b750970805e4cc662897fb80d">removerM</a></div><div class="ttdeci">void removerM(Lista *l, unsigned n)</div><div class="ttdef"><b>Definição</b> lista.c:73</div></div>
+<div class="ttc" id="alista_8h_html_a6a2f2bdb6c5771c0d4baa0f69ee4aaf1"><div class="ttname"><a href="lista_8h.html#a6a2f2bdb6c5771c0d4baa0f69ee4aaf1">inserirI</a></div><div class="ttdeci">void inserirI(Lista *l, T task, H horas, H minutos)</div><div class="ttdef"><b>Definição</b> lista.c:24</div></div>
+<div class="ttc" id="alista_8h_html_a6aec3b42762e7b52be059dfcba2ff1be"><div class="ttname"><a href="lista_8h.html#a6aec3b42762e7b52be059dfcba2ff1be">enfileirar</a></div><div class="ttdeci">void enfileirar(Fila *f, T new_task, H horas, H minutos)</div><div class="ttdef"><b>Definição</b> lista.c:135</div></div>
+<div class="ttc" id="alista_8h_html_a75873c015eba71fdc478c1123358884a"><div class="ttname"><a href="lista_8h.html#a75873c015eba71fdc478c1123358884a">point</a></div><div class="ttdeci">Node * point</div><div class="ttdef"><b>Definição</b> lista.h:17</div></div>
+<div class="ttc" id="alista_8h_html_a8fea4fe6f0d358f67c02cb1c362f10cc"><div class="ttname"><a href="lista_8h.html#a8fea4fe6f0d358f67c02cb1c362f10cc">esvaziarFila</a></div><div class="ttdeci">void esvaziarFila(Fila *f, short n)</div><div class="ttdef"><b>Definição</b> lista.c:166</div></div>
+<div class="ttc" id="alista_8h_html_a9197f05e4e8b457c003cab57bcb7aad6"><div class="ttname"><a href="lista_8h.html#a9197f05e4e8b457c003cab57bcb7aad6">filaCheia</a></div><div class="ttdeci">int filaCheia(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:122</div></div>
+<div class="ttc" id="alista_8h_html_a93184205ebb7cd1aa114c710ecc01e44"><div class="ttname"><a href="lista_8h.html#a93184205ebb7cd1aa114c710ecc01e44">imprimeFila</a></div><div class="ttdeci">void imprimeFila(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:157</div></div>
+<div class="ttc" id="alista_8h_html_a9396d02c8c102463b14fcdc562685c75"><div class="ttname"><a href="lista_8h.html#a9396d02c8c102463b14fcdc562685c75">H</a></div><div class="ttdeci">short H</div><div class="ttdef"><b>Definição</b> lista.h:7</div></div>
+<div class="ttc" id="alista_8h_html_a94703dc41b18a61a48e9a5084fd6b774"><div class="ttname"><a href="lista_8h.html#a94703dc41b18a61a48e9a5084fd6b774">redimensionarFila</a></div><div class="ttdeci">void redimensionarFila(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:126</div></div>
+<div class="ttc" id="alista_8h_html_aad6f064cf4a6993d185ef790ae9cd4fb"><div class="ttname"><a href="lista_8h.html#aad6f064cf4a6993d185ef790ae9cd4fb">inserirF</a></div><div class="ttdeci">void inserirF(Lista *l, T task, H horas, H minutos)</div><div class="ttdef"><b>Definição</b> lista.c:37</div></div>
+<div class="ttc" id="alista_8h_html_aadb963287ba576f19e5897d6be27a220"><div class="ttname"><a href="lista_8h.html#aadb963287ba576f19e5897d6be27a220">removerI</a></div><div class="ttdeci">void removerI(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:50</div></div>
+<div class="ttc" id="alista_8h_html_aafe1f66fe68075cde37d804f12af36ca"><div class="ttname"><a href="lista_8h.html#aafe1f66fe68075cde37d804f12af36ca">criarLista</a></div><div class="ttdeci">void criarLista(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:5</div></div>
+<div class="ttc" id="alista_8h_html_abaa7a64d6b164783555a7d67a6159164"><div class="ttname"><a href="lista_8h.html#abaa7a64d6b164783555a7d67a6159164">desenfileirar</a></div><div class="ttdeci">Item desenfileirar(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:145</div></div>
+<div class="ttc" id="alista_8h_html_ad0e58c8d86e5c89dc77bfde1c568971c"><div class="ttname"><a href="lista_8h.html#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a></div><div class="ttdeci">struct node_ Node</div></div>
+<div class="ttc" id="alista_8h_html_ade7b9a12324f4d1425f2bb626d67b45f"><div class="ttname"><a href="lista_8h.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a></div><div class="ttdeci">int filaVazia(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:118</div></div>
+<div class="ttc" id="alista_8h_html_af6448f2fa9c826b3af5a95f12febc9db"><div class="ttname"><a href="lista_8h.html#af6448f2fa9c826b3af5a95f12febc9db">criarFila</a></div><div class="ttdeci">void criarFila(Fila *f, int tam)</div><div class="ttdef"><b>Definição</b> lista.c:110</div></div>
+<div class="ttc" id="astruct_fila_html"><div class="ttname"><a href="struct_fila.html">Fila</a></div><div class="ttdef"><b>Definição</b> lista.h:32</div></div>
+<div class="ttc" id="astruct_fila_html_a002cd812923fd3fdff064342937c8de6"><div class="ttname"><a href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">Fila::capacidade</a></div><div class="ttdeci">unsigned capacidade</div><div class="ttdef"><b>Definição</b> lista.h:36</div></div>
+<div class="ttc" id="astruct_fila_html_a22be39504679a934aea082c76c95bb68"><div class="ttname"><a href="struct_fila.html#a22be39504679a934aea082c76c95bb68">Fila::fim</a></div><div class="ttdeci">int fim</div><div class="ttdef"><b>Definição</b> lista.h:35</div></div>
+<div class="ttc" id="astruct_fila_html_a245260f6f74972558f61b85227df5aae"><div class="ttname"><a href="struct_fila.html#a245260f6f74972558f61b85227df5aae">Fila::size</a></div><div class="ttdeci">unsigned size</div><div class="ttdef"><b>Definição</b> lista.h:37</div></div>
+<div class="ttc" id="astruct_fila_html_a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07"><div class="ttname"><a href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">Fila::ini</a></div><div class="ttdeci">int ini</div><div class="ttdef"><b>Definição</b> lista.h:34</div></div>
+<div class="ttc" id="astruct_fila_html_aed572bb35bc9f6879090ca99cc892fa1"><div class="ttname"><a href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">Fila::itens</a></div><div class="ttdeci">Item * itens</div><div class="ttdef"><b>Definição</b> lista.h:33</div></div>
+<div class="ttc" id="astruct_item_html"><div class="ttname"><a href="struct_item.html">Item</a></div><div class="ttdef"><b>Definição</b> lista.h:26</div></div>
+<div class="ttc" id="astruct_item_html_a2e41721addabc99d7231045faeafd6c3"><div class="ttname"><a href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">Item::time</a></div><div class="ttdeci">H time[2]</div><div class="ttdef"><b>Definição</b> lista.h:28</div></div>
+<div class="ttc" id="astruct_item_html_a64df6f132f4b4d2e69c86a662b314b91"><div class="ttname"><a href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">Item::task</a></div><div class="ttdeci">T task</div><div class="ttdef"><b>Definição</b> lista.h:27</div></div>
+<div class="ttc" id="astruct_lista_html"><div class="ttname"><a href="struct_lista.html">Lista</a></div><div class="ttdef"><b>Definição</b> lista.h:20</div></div>
+<div class="ttc" id="astruct_lista_html_a245260f6f74972558f61b85227df5aae"><div class="ttname"><a href="struct_lista.html#a245260f6f74972558f61b85227df5aae">Lista::size</a></div><div class="ttdeci">unsigned size</div><div class="ttdef"><b>Definição</b> lista.h:22</div></div>
+<div class="ttc" id="astruct_lista_html_a8627deb587bf1d4a84f8e3f2dae86183"><div class="ttname"><a href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">Lista::sent</a></div><div class="ttdeci">Node * sent</div><div class="ttdef"><b>Definição</b> lista.h:21</div></div>
+<div class="ttc" id="astructnode___html"><div class="ttname"><a href="structnode__.html">node_</a></div><div class="ttdef"><b>Definição</b> lista.h:10</div></div>
+<div class="ttc" id="astructnode___html_a24923762d5223cd3be20904952540707"><div class="ttname"><a href="structnode__.html#a24923762d5223cd3be20904952540707">node_::prox</a></div><div class="ttdeci">struct node_ * prox</div><div class="ttdef"><b>Definição</b> lista.h:13</div></div>
+<div class="ttc" id="astructnode___html_a2e41721addabc99d7231045faeafd6c3"><div class="ttname"><a href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">node_::time</a></div><div class="ttdeci">H time[2]</div><div class="ttdef"><b>Definição</b> lista.h:12</div></div>
+<div class="ttc" id="astructnode___html_a64df6f132f4b4d2e69c86a662b314b91"><div class="ttname"><a href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">node_::task</a></div><div class="ttdeci">T task</div><div class="ttdef"><b>Definição</b> lista.h:11</div></div>
+<div class="ttc" id="astructnode___html_aa2fd49a828800a317680c2942ef54e4c"><div class="ttname"><a href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">node_::ant</a></div><div class="ttdeci">struct node_ * ant</div><div class="ttdef"><b>Definição</b> lista.h:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
