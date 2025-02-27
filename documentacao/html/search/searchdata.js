@@ -1,12 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "acdefhijlmnprst",
-  1: "dfiln",
-  2: "ilmr",
-  3: "acdefilmr",
-  4: "acefijlpst",
-  5: "hnpt",
-  6: "hm"
+  0: "acdefhilmnoprstu",
+  1: "filn",
+  2: "lmr",
+  3: "acdefilmor",
+  4: "acefilmpst",
+  5: "hnpt"
 };
 
 var indexSectionNames =
@@ -16,8 +15,7 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "typedefs",
-  6: "defines"
+  5: "typedefs"
 };
 
 var indexSectionLabels =
@@ -27,7 +25,6 @@ var indexSectionLabels =
   2: "Arquivos",
   3: "Funções",
   4: "Variáveis",
-  5: "Definições de Tipos",
-  6: "Definições e Macros"
+  5: "Definições de Tipos"
 };
 

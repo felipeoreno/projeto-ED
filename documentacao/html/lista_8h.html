@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Documentação projeto ed: Referência do Arquivo C:/Users/Vinicius Souza/Documents/projeto-ED/lista.h</title>
+<title>documentacao: Referência do Arquivo C:/Users/Vinicius Souza/Downloads/projeto-ED/lista.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Documentação projeto ed<span id="projectnumber">&#160;3.0</span>
+   <div id="projectname">documentacao<span id="projectnumber">&#160;4.0</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_f396504afdc959660871b003fa10164d.html">Documents</a></li><li class="navelem"><a class="el" href="dir_962363fbfaec904c5a841d6ccf505995.html">projeto-ED</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_5051e657ae7f70b1870106dfe22c0ce6.html">Vinicius Souza</a></li><li class="navelem"><a class="el" href="dir_82df3f2d49beb93a7c075d4564b11090.html">Downloads</a></li><li class="navelem"><a class="el" href="dir_2d55f59db1d386f9ce1f5aaed5d2f06d.html">projeto-ED</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -142,6 +142,8 @@ Funções</h2></td></tr>
 <tr class="separator:aadb963287ba576f19e5897d6be27a220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a7016c6980dccebac2f5ee2a40b613c" id="r_a3a7016c6980dccebac2f5ee2a40b613c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a7016c6980dccebac2f5ee2a40b613c">removerF</a> (<a class="el" href="struct_lista.html">Lista</a> *l)</td></tr>
 <tr class="separator:a3a7016c6980dccebac2f5ee2a40b613c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fa8d6b750970805e4cc662897fb80d" id="r_a61fa8d6b750970805e4cc662897fb80d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61fa8d6b750970805e4cc662897fb80d">removerM</a> (<a class="el" href="struct_lista.html">Lista</a> *l, unsigned n)</td></tr>
+<tr class="separator:a61fa8d6b750970805e4cc662897fb80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58e545d7673602bbd2fd1cef0a85256f" id="r_a58e545d7673602bbd2fd1cef0a85256f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_item.html">Item</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58e545d7673602bbd2fd1cef0a85256f">copiarItem</a> (<a class="el" href="struct_lista.html">Lista</a> *l, unsigned n)</td></tr>
 <tr class="separator:a58e545d7673602bbd2fd1cef0a85256f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6448f2fa9c826b3af5a95f12febc9db" id="r_af6448f2fa9c826b3af5a95f12febc9db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6448f2fa9c826b3af5a95f12febc9db">criarFila</a> (<a class="el" href="struct_fila.html">Fila</a> *f, int tam)</td></tr>
@@ -239,24 +241,23 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                     {</div>
-<div class="line"><span class="lineno">   77</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++){</div>
-<div class="line"><span class="lineno">   80</span>        temp = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-<div class="line"><span class="lineno">   82</span>    <a class="code hl_struct" href="struct_item.html">Item</a> copy;</div>
-<div class="line"><span class="lineno">   83</span>    copy.<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>;</div>
-<div class="line"><span class="lineno">   84</span>    copy.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = temp-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0];</div>
-<div class="line"><span class="lineno">   85</span>    copy.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = temp-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1];</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">   88</span>}</div>
-<div class="ttc" id="alista_8h_html_ad0e58c8d86e5c89dc77bfde1c568971c"><div class="ttname"><a href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a></div><div class="ttdeci">struct node_ Node</div><div class="ttdef"><b>Definição</b> lista.h:16</div></div>
-<div class="ttc" id="astruct_item_html"><div class="ttname"><a href="struct_item.html">Item</a></div><div class="ttdef"><b>Definição</b> lista.h:29</div></div>
-<div class="ttc" id="astruct_item_html_a2e41721addabc99d7231045faeafd6c3"><div class="ttname"><a href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">Item::time</a></div><div class="ttdeci">H time[2]</div><div class="ttdef"><b>Definição</b> lista.h:31</div></div>
-<div class="ttc" id="astruct_item_html_a64df6f132f4b4d2e69c86a662b314b91"><div class="ttname"><a href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">Item::task</a></div><div class="ttdeci">T task</div><div class="ttdef"><b>Definição</b> lista.h:30</div></div>
-<div class="ttc" id="astruct_lista_html_a8627deb587bf1d4a84f8e3f2dae86183"><div class="ttname"><a href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">Lista::sent</a></div><div class="ttdeci">Node * sent</div><div class="ttdef"><b>Definição</b> lista.h:22</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                      {</div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 1; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">   98</span>        temp = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_struct" href="struct_item.html">Item</a> copy;</div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">// Aqui, usamos a mesma string</span></div>
+<div class="line"><span class="lineno">  102</span>    copy.<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>;</div>
+<div class="line"><span class="lineno">  103</span>    copy.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = temp-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0];</div>
+<div class="line"><span class="lineno">  104</span>    copy.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = temp-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1];</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> copy;</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+<div class="ttc" id="alista_8h_html_ad0e58c8d86e5c89dc77bfde1c568971c"><div class="ttname"><a href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a></div><div class="ttdeci">struct node_ Node</div></div>
+<div class="ttc" id="astruct_item_html"><div class="ttname"><a href="struct_item.html">Item</a></div><div class="ttdef"><b>Definição</b> lista.h:26</div></div>
+<div class="ttc" id="astruct_item_html_a2e41721addabc99d7231045faeafd6c3"><div class="ttname"><a href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">Item::time</a></div><div class="ttdeci">H time[2]</div><div class="ttdef"><b>Definição</b> lista.h:28</div></div>
+<div class="ttc" id="astruct_item_html_a64df6f132f4b4d2e69c86a662b314b91"><div class="ttname"><a href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">Item::task</a></div><div class="ttdeci">T task</div><div class="ttdef"><b>Definição</b> lista.h:27</div></div>
+<div class="ttc" id="astruct_lista_html_a8627deb587bf1d4a84f8e3f2dae86183"><div class="ttname"><a href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">Lista::sent</a></div><div class="ttdeci">Node * sent</div><div class="ttdef"><b>Definição</b> lista.h:21</div></div>
 <div class="ttc" id="astructnode___html_a24923762d5223cd3be20904952540707"><div class="ttname"><a href="structnode__.html#a24923762d5223cd3be20904952540707">node_::prox</a></div><div class="ttdeci">struct node_ * prox</div><div class="ttdef"><b>Definição</b> lista.h:13</div></div>
 <div class="ttc" id="astructnode___html_a2e41721addabc99d7231045faeafd6c3"><div class="ttname"><a href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">node_::time</a></div><div class="ttdeci">H time[2]</div><div class="ttdef"><b>Definição</b> lista.h:12</div></div>
 <div class="ttc" id="astructnode___html_a64df6f132f4b4d2e69c86a662b314b91"><div class="ttname"><a href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">node_::task</a></div><div class="ttdeci">T task</div><div class="ttdef"><b>Definição</b> lista.h:11</div></div>
@@ -281,18 +282,18 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                {</div>
-<div class="line"><span class="lineno">   91</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a> = (<a class="code hl_struct" href="struct_item.html">Item</a>*)malloc(tam * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_item.html">Item</a>));</div>
-<div class="line"><span class="lineno">   92</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> = 0;</div>
-<div class="line"><span class="lineno">   93</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a> = -1;</div>
-<div class="line"><span class="lineno">   94</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a> = tam;</div>
-<div class="line"><span class="lineno">   95</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a> = 0;</div>
-<div class="line"><span class="lineno">   96</span>}</div>
-<div class="ttc" id="astruct_fila_html_a002cd812923fd3fdff064342937c8de6"><div class="ttname"><a href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">Fila::capacidade</a></div><div class="ttdeci">unsigned capacidade</div><div class="ttdef"><b>Definição</b> lista.h:38</div></div>
-<div class="ttc" id="astruct_fila_html_a22be39504679a934aea082c76c95bb68"><div class="ttname"><a href="struct_fila.html#a22be39504679a934aea082c76c95bb68">Fila::fim</a></div><div class="ttdeci">int fim</div><div class="ttdef"><b>Definição</b> lista.h:37</div></div>
-<div class="ttc" id="astruct_fila_html_a245260f6f74972558f61b85227df5aae"><div class="ttname"><a href="struct_fila.html#a245260f6f74972558f61b85227df5aae">Fila::size</a></div><div class="ttdeci">unsigned size</div><div class="ttdef"><b>Definição</b> lista.h:39</div></div>
-<div class="ttc" id="astruct_fila_html_a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07"><div class="ttname"><a href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">Fila::ini</a></div><div class="ttdeci">int ini</div><div class="ttdef"><b>Definição</b> lista.h:36</div></div>
-<div class="ttc" id="astruct_fila_html_aed572bb35bc9f6879090ca99cc892fa1"><div class="ttname"><a href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">Fila::itens</a></div><div class="ttdeci">Item * itens</div><div class="ttdef"><b>Definição</b> lista.h:35</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                 {</div>
+<div class="line"><span class="lineno">  111</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a> = (<a class="code hl_struct" href="struct_item.html">Item</a>*)malloc(tam * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_item.html">Item</a>));</div>
+<div class="line"><span class="lineno">  112</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> = 0;</div>
+<div class="line"><span class="lineno">  113</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a> = -1;</div>
+<div class="line"><span class="lineno">  114</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a> = tam;</div>
+<div class="line"><span class="lineno">  115</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a> = 0;</div>
+<div class="line"><span class="lineno">  116</span>}</div>
+<div class="ttc" id="astruct_fila_html_a002cd812923fd3fdff064342937c8de6"><div class="ttname"><a href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">Fila::capacidade</a></div><div class="ttdeci">unsigned capacidade</div><div class="ttdef"><b>Definição</b> lista.h:36</div></div>
+<div class="ttc" id="astruct_fila_html_a22be39504679a934aea082c76c95bb68"><div class="ttname"><a href="struct_fila.html#a22be39504679a934aea082c76c95bb68">Fila::fim</a></div><div class="ttdeci">int fim</div><div class="ttdef"><b>Definição</b> lista.h:35</div></div>
+<div class="ttc" id="astruct_fila_html_a245260f6f74972558f61b85227df5aae"><div class="ttname"><a href="struct_fila.html#a245260f6f74972558f61b85227df5aae">Fila::size</a></div><div class="ttdeci">unsigned size</div><div class="ttdef"><b>Definição</b> lista.h:37</div></div>
+<div class="ttc" id="astruct_fila_html_a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07"><div class="ttname"><a href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">Fila::ini</a></div><div class="ttdeci">int ini</div><div class="ttdef"><b>Definição</b> lista.h:34</div></div>
+<div class="ttc" id="astruct_fila_html_aed572bb35bc9f6879090ca99cc892fa1"><div class="ttname"><a href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">Fila::itens</a></div><div class="ttdeci">Item * itens</div><div class="ttdef"><b>Definição</b> lista.h:33</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,14 +311,14 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    9</span>                         {</div>
-<div class="line"><span class="lineno">   10</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *n = (<a class="code hl_typedef" href="#a75873c015eba71fdc478c1123358884a">point</a>)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>));  <span class="comment">// Alocação de um ponteiro para o primeiro nó (sentinela)</span></div>
-<div class="line"><span class="lineno">   11</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a> = n;                            <span class="comment">// Define o primeiro nó &quot;n&quot; como sentinela</span></div>
-<div class="line"><span class="lineno">   12</span>    n-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = n-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;             <span class="comment">// Atribui o próprio sentinela a seus ponteiros de anterior e de próximo</span></div>
-<div class="line"><span class="lineno">   13</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a> = 0;                            <span class="comment">// Define como 0 o tamanho da lista</span></div>
-<div class="line"><span class="lineno">   14</span>}</div>
-<div class="ttc" id="alista_8h_html_a75873c015eba71fdc478c1123358884a"><div class="ttname"><a href="#a75873c015eba71fdc478c1123358884a">point</a></div><div class="ttdeci">Node * point</div><div class="ttdef"><b>Definição</b> lista.h:18</div></div>
-<div class="ttc" id="astruct_lista_html_a245260f6f74972558f61b85227df5aae"><div class="ttname"><a href="struct_lista.html#a245260f6f74972558f61b85227df5aae">Lista::size</a></div><div class="ttdeci">unsigned size</div><div class="ttdef"><b>Definição</b> lista.h:23</div></div>
+<div class="fragment"><div class="line"><span class="lineno">    5</span>                          {</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *n = (<a class="code hl_typedef" href="#a75873c015eba71fdc478c1123358884a">point</a>)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>));  <span class="comment">// Alocação de um ponteiro para o primeiro nó (sentinela)</span></div>
+<div class="line"><span class="lineno">    7</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a> = n;                            <span class="comment">// Define o primeiro nó &quot;n&quot; como sentinela</span></div>
+<div class="line"><span class="lineno">    8</span>    n-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = n-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = n;                   <span class="comment">// Atribui o próprio sentinela a seus ponteiros de anterior e de próximo</span></div>
+<div class="line"><span class="lineno">    9</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a> = 0;                            <span class="comment">// Define como 0 o tamanho da lista</span></div>
+<div class="line"><span class="lineno">   10</span>}</div>
+<div class="ttc" id="alista_8h_html_a75873c015eba71fdc478c1123358884a"><div class="ttname"><a href="#a75873c015eba71fdc478c1123358884a">point</a></div><div class="ttdeci">Node * point</div><div class="ttdef"><b>Definição</b> lista.h:17</div></div>
+<div class="ttc" id="astruct_lista_html_a245260f6f74972558f61b85227df5aae"><div class="ttname"><a href="struct_lista.html#a245260f6f74972558f61b85227df5aae">Lista::size</a></div><div class="ttdeci">unsigned size</div><div class="ttdef"><b>Definição</b> lista.h:22</div></div>
 <div class="ttc" id="astructnode___html_aa2fd49a828800a317680c2942ef54e4c"><div class="ttname"><a href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">node_::ant</a></div><div class="ttdeci">struct node_ * ant</div><div class="ttdef"><b>Definição</b> lista.h:14</div></div>
 </div><!-- fragment -->
 </div>
@@ -336,14 +337,14 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                           {</div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">while</span>(!<a class="code hl_function" href="lista_8c.html#a358274d43cd46ccfa897d5937773b204">listaVazia</a>(l)){</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_function" href="lista_8c.html#aadb963287ba576f19e5897d6be27a220">removerI</a>(l);        <span class="comment">// Enquanto a lista não estiver vazia, remove cada um de seus elementos</span></div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="line"><span class="lineno">   20</span>    free(l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>);          <span class="comment">// Libera a memória que armazenava o sentinela, o último nó restante</span></div>
-<div class="line"><span class="lineno">   21</span>}</div>
-<div class="ttc" id="alista_8c_html_a358274d43cd46ccfa897d5937773b204"><div class="ttname"><a href="lista_8c.html#a358274d43cd46ccfa897d5937773b204">listaVazia</a></div><div class="ttdeci">int listaVazia(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:23</div></div>
-<div class="ttc" id="alista_8c_html_aadb963287ba576f19e5897d6be27a220"><div class="ttname"><a href="lista_8c.html#aadb963287ba576f19e5897d6be27a220">removerI</a></div><div class="ttdeci">void removerI(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:54</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>                           {</div>
+<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">while</span>(!<a class="code hl_function" href="lista_8c.html#a358274d43cd46ccfa897d5937773b204">listaVazia</a>(l)){</div>
+<div class="line"><span class="lineno">   14</span>        <a class="code hl_function" href="lista_8c.html#aadb963287ba576f19e5897d6be27a220">removerI</a>(l);        <span class="comment">// Enquanto a lista não estiver vazia, remove cada um de seus elementos</span></div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="line"><span class="lineno">   16</span>    free(l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>);          <span class="comment">// Libera a memória que armazenava o sentinela, o último nó restante</span></div>
+<div class="line"><span class="lineno">   17</span>}</div>
+<div class="ttc" id="alista_8c_html_a358274d43cd46ccfa897d5937773b204"><div class="ttname"><a href="lista_8c.html#a358274d43cd46ccfa897d5937773b204">listaVazia</a></div><div class="ttdeci">int listaVazia(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:19</div></div>
+<div class="ttc" id="alista_8c_html_aadb963287ba576f19e5897d6be27a220"><div class="ttname"><a href="lista_8c.html#aadb963287ba576f19e5897d6be27a220">removerI</a></div><div class="ttdeci">void removerI(Lista *l)</div><div class="ttdef"><b>Definição</b> lista.c:50</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -361,20 +362,18 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                           {</div>
-<div class="line"><span class="lineno">  129</span>    <a class="code hl_struct" href="struct_item.html">Item</a> temp;</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f)){</div>
-<div class="line"><span class="lineno">  132</span>        temp.<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = <span class="stringliteral">&quot;Fila vazia.&quot;</span>;</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> temp;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>    temp = f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a>];</div>
-<div class="line"><span class="lineno">  137</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> = (f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> + 1) % f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
-<div class="line"><span class="lineno">  138</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>--;</div>
-<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> temp;</div>
-<div class="line"><span class="lineno">  140</span>}</div>
-<div class="ttc" id="alista_8c_html_ade7b9a12324f4d1425f2bb626d67b45f"><div class="ttname"><a href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a></div><div class="ttdeci">int filaVazia(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:98</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                            {</div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_struct" href="struct_item.html">Item</a> temp;</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f)) {</div>
+<div class="line"><span class="lineno">  148</span>        temp.<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = <span class="stringliteral">&quot;Fila vazia.&quot;</span>;</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">return</span> temp;</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="line"><span class="lineno">  151</span>    temp = f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a>];</div>
+<div class="line"><span class="lineno">  152</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> = (f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> + 1) % f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
+<div class="line"><span class="lineno">  153</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>--;</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><span class="lineno">  155</span>}</div>
+<div class="ttc" id="alista_8c_html_ade7b9a12324f4d1425f2bb626d67b45f"><div class="ttname"><a href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a></div><div class="ttdeci">int filaVazia(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:118</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -392,10 +391,10 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                          {</div>
-<div class="line"><span class="lineno">  167</span>    free(f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>);</div>
-<div class="line"><span class="lineno">  168</span>    free(f);</div>
-<div class="line"><span class="lineno">  169</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                           {</div>
+<div class="line"><span class="lineno">  178</span>    free(f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>);</div>
+<div class="line"><span class="lineno">  179</span>    <span class="comment">// Caso f tenha sido alocado dinamicamente, libere-o também.</span></div>
+<div class="line"><span class="lineno">  180</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -427,19 +426,17 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                        {</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="lista_8c.html#a9197f05e4e8b457c003cab57bcb7aad6">filaCheia</a>(f)){</div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="lista_8c.html#a94703dc41b18a61a48e9a5084fd6b774">redimensionarFila</a>(f);</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a> = (f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a> + 1) % f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
-<div class="line"><span class="lineno">  122</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>].<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = new_task;</div>
-<div class="line"><span class="lineno">  123</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = horas;</div>
-<div class="line"><span class="lineno">  124</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = minutos;</div>
-<div class="line"><span class="lineno">  125</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>++;</div>
-<div class="line"><span class="lineno">  126</span>}</div>
-<div class="ttc" id="alista_8c_html_a9197f05e4e8b457c003cab57bcb7aad6"><div class="ttname"><a href="lista_8c.html#a9197f05e4e8b457c003cab57bcb7aad6">filaCheia</a></div><div class="ttdeci">int filaCheia(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:102</div></div>
-<div class="ttc" id="alista_8c_html_a94703dc41b18a61a48e9a5084fd6b774"><div class="ttname"><a href="lista_8c.html#a94703dc41b18a61a48e9a5084fd6b774">redimensionarFila</a></div><div class="ttdeci">void redimensionarFila(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:106</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                         {</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="lista_8c.html#a9197f05e4e8b457c003cab57bcb7aad6">filaCheia</a>(f))</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_function" href="lista_8c.html#a94703dc41b18a61a48e9a5084fd6b774">redimensionarFila</a>(f);</div>
+<div class="line"><span class="lineno">  138</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a> = (f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a> + 1) % f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
+<div class="line"><span class="lineno">  139</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>].<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = new_task;</div>
+<div class="line"><span class="lineno">  140</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = horas;</div>
+<div class="line"><span class="lineno">  141</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[f-&gt;<a class="code hl_variable" href="struct_fila.html#a22be39504679a934aea082c76c95bb68">fim</a>].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = minutos;</div>
+<div class="line"><span class="lineno">  142</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>++;</div>
+<div class="line"><span class="lineno">  143</span>}</div>
+<div class="ttc" id="alista_8c_html_a9197f05e4e8b457c003cab57bcb7aad6"><div class="ttname"><a href="lista_8c.html#a9197f05e4e8b457c003cab57bcb7aad6">filaCheia</a></div><div class="ttdeci">int filaCheia(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:122</div></div>
+<div class="ttc" id="alista_8c_html_a94703dc41b18a61a48e9a5084fd6b774"><div class="ttname"><a href="lista_8c.html#a94703dc41b18a61a48e9a5084fd6b774">redimensionarFila</a></div><div class="ttdeci">void redimensionarFila(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:126</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -461,19 +458,17 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                   {</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f)){</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-<div class="line"><span class="lineno">  157</span>    </div>
-<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">while</span>(!<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f)){</div>
-<div class="line"><span class="lineno">  159</span>        <a class="code hl_struct" href="struct_item.html">Item</a> itm = <a class="code hl_function" href="lista_8c.html#abaa7a64d6b164783555a7d67a6159164">desenfileirar</a>(f);</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span>(n){</div>
-<div class="line"><span class="lineno">  161</span>            printf(<span class="stringliteral">&quot;%s %02hd:%02hd\n&quot;</span>, itm.<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>, itm.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0], itm.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1]);</div>
-<div class="line"><span class="lineno">  162</span>        }</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="line"><span class="lineno">  164</span>}</div>
-<div class="ttc" id="alista_8c_html_abaa7a64d6b164783555a7d67a6159164"><div class="ttname"><a href="lista_8c.html#abaa7a64d6b164783555a7d67a6159164">desenfileirar</a></div><div class="ttdeci">Item desenfileirar(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:128</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>                                    {</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f))</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f)) {</div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_struct" href="struct_item.html">Item</a> itm = <a class="code hl_function" href="lista_8c.html#abaa7a64d6b164783555a7d67a6159164">desenfileirar</a>(f);</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (n) {</div>
+<div class="line"><span class="lineno">  172</span>            printf(<span class="stringliteral">&quot;%s %02hd:%02hd\n&quot;</span>, itm.<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>, itm.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0], itm.<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1]);</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span>}</div>
+<div class="ttc" id="alista_8c_html_abaa7a64d6b164783555a7d67a6159164"><div class="ttname"><a href="lista_8c.html#abaa7a64d6b164783555a7d67a6159164">desenfileirar</a></div><div class="ttdeci">Item desenfileirar(Fila *f)</div><div class="ttdef"><b>Definição</b> lista.c:145</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -491,9 +486,9 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                      {</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a> == f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
-<div class="line"><span class="lineno">  104</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                       {</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> (f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a> == f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>);</div>
+<div class="line"><span class="lineno">  124</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -511,9 +506,9 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                      {</div>
-<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">return</span> f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a> == 0;</div>
-<div class="line"><span class="lineno">  100</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>                       {</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> (f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a> == 0);</div>
+<div class="line"><span class="lineno">  120</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -531,16 +526,14 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                         {</div>
-<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f)){</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="line"><span class="lineno">  146</span>    </div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>; i++){</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordtype">int</span> idx = (f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> + i) % f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
-<div class="line"><span class="lineno">  149</span>        printf(<span class="stringliteral">&quot;%s %02hd:%02hd\n&quot;</span>, f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[idx].<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>, f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[idx].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0], f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[idx].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1]);</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="line"><span class="lineno">  151</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>                          {</div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="lista_8c.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(f))</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; f-&gt;<a class="code hl_variable" href="struct_fila.html#a245260f6f74972558f61b85227df5aae">size</a>; i++) {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordtype">int</span> idx = (f-&gt;<a class="code hl_variable" href="struct_fila.html#a4d2dfcf4c3fc3f31f6c2f5b7a93d6f07">ini</a> + i) % f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a>;</div>
+<div class="line"><span class="lineno">  162</span>        printf(<span class="stringliteral">&quot;%s %02hd:%02hd\n&quot;</span>, f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[idx].<a class="code hl_variable" href="struct_item.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>, f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[idx].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0], f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>[idx].<a class="code hl_variable" href="struct_item.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1]);</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+<div class="line"><span class="lineno">  164</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -572,17 +565,17 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                   {</div>
-<div class="line"><span class="lineno">   42</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *novo = (<a class="code hl_typedef" href="#a75873c015eba71fdc478c1123358884a">point</a>)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>));   <span class="comment">// Aloca espaço na memória para um novo nó</span></div>
-<div class="line"><span class="lineno">   43</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = task;                          <span class="comment">// Atribui o dado do parâmetro ao conteúdo do nó</span></div>
-<div class="line"><span class="lineno">   44</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = horas;</div>
-<div class="line"><span class="lineno">   45</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = minutos;</div>
-<div class="line"><span class="lineno">   46</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;                       <span class="comment">// Próximo aponta para o sentinela</span></div>
-<div class="line"><span class="lineno">   47</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;                   <span class="comment">// Anterior aponta para o, até então, últiimo elemento da lista</span></div>
-<div class="line"><span class="lineno">   48</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = novo;                     <span class="comment">// Ponteiro &quot;próximo&quot; do antigo último elemento, aponta para o novo nó</span></div>
-<div class="line"><span class="lineno">   49</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = novo;                        <span class="comment">// Atribui o novo nó ao ponteiro &quot;anterior&quot; do sentinela </span></div>
-<div class="line"><span class="lineno">   50</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>++;                                  <span class="comment">// Incrementa o tamanho da lista</span></div>
-<div class="line"><span class="lineno">   51</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                   {</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *novo = (<a class="code hl_typedef" href="#a75873c015eba71fdc478c1123358884a">point</a>)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>));   <span class="comment">// Aloca espaço na memória para um novo nó</span></div>
+<div class="line"><span class="lineno">   39</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = task;                          <span class="comment">// Atribui o dado do parâmetro ao conteúdo do nó</span></div>
+<div class="line"><span class="lineno">   40</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = horas;</div>
+<div class="line"><span class="lineno">   41</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = minutos;</div>
+<div class="line"><span class="lineno">   42</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;                       <span class="comment">// Próximo aponta para o sentinela</span></div>
+<div class="line"><span class="lineno">   43</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;                   <span class="comment">// Anterior aponta para o, até então, últiimo elemento da lista</span></div>
+<div class="line"><span class="lineno">   44</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = novo;                     <span class="comment">// Ponteiro &quot;próximo&quot; do antigo último elemento, aponta para o novo nó</span></div>
+<div class="line"><span class="lineno">   45</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = novo;                        <span class="comment">// Atribui o novo nó ao ponteiro &quot;anterior&quot; do sentinela </span></div>
+<div class="line"><span class="lineno">   46</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>++;                                  <span class="comment">// Incrementa o tamanho da lista</span></div>
+<div class="line"><span class="lineno">   47</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -614,17 +607,17 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                   {</div>
-<div class="line"><span class="lineno">   29</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *novo = (<a class="code hl_typedef" href="#a75873c015eba71fdc478c1123358884a">point</a>)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>));   <span class="comment">// Aloca espaço na memória para um novo nó</span></div>
-<div class="line"><span class="lineno">   30</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = task;                          <span class="comment">// Atribui o dado do parâmetro ao conteúdo do nó</span></div>
-<div class="line"><span class="lineno">   31</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = horas;</div>
-<div class="line"><span class="lineno">   32</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = minutos;</div>
-<div class="line"><span class="lineno">   33</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;                 <span class="comment">// Próximo aponta para o, até então, primeiro elemento da lista</span></div>
-<div class="line"><span class="lineno">   34</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;                        <span class="comment">// Anterior aponta para o sentinela</span></div>
-<div class="line"><span class="lineno">   35</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = novo;                     <span class="comment">// Ponteiro &quot;anterior&quot; do antigo primeiro elemento, aponta para o novo nó</span></div>
-<div class="line"><span class="lineno">   36</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = novo;                       <span class="comment">// Atribui o novo nó ao ponteiro &quot;próximo&quot; do sentinela </span></div>
-<div class="line"><span class="lineno">   37</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>++;                                  <span class="comment">// Incrementa o tamanho da lista</span></div>
-<div class="line"><span class="lineno">   38</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                   {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *novo = (<a class="code hl_typedef" href="#a75873c015eba71fdc478c1123358884a">point</a>)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a>));   <span class="comment">// Aloca espaço na memória para um novo nó</span></div>
+<div class="line"><span class="lineno">   26</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a> = task;                          <span class="comment">// Atribui o dado do parâmetro ao conteúdo do nó</span></div>
+<div class="line"><span class="lineno">   27</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[0] = horas;</div>
+<div class="line"><span class="lineno">   28</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a2e41721addabc99d7231045faeafd6c3">time</a>[1] = minutos;</div>
+<div class="line"><span class="lineno">   29</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;                 <span class="comment">// Próximo aponta para o, até então, primeiro elemento da lista</span></div>
+<div class="line"><span class="lineno">   30</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;                        <span class="comment">// Anterior aponta para o sentinela</span></div>
+<div class="line"><span class="lineno">   31</span>    novo-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = novo;                     <span class="comment">// Ponteiro &quot;anterior&quot; do antigo primeiro elemento, aponta para o novo nó</span></div>
+<div class="line"><span class="lineno">   32</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = novo;                       <span class="comment">// Atribui o novo nó ao ponteiro &quot;próximo&quot; do sentinela </span></div>
+<div class="line"><span class="lineno">   33</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>++;                                  <span class="comment">// Incrementa o tamanho da lista</span></div>
+<div class="line"><span class="lineno">   34</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -642,9 +635,9 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                        {</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">return</span> (l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> == l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>);      <span class="comment">// Retorna 1 se o ponteiro de próximo do sentinela apontar para ele mesmo (lista vazia)</span></div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                        {</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">return</span> (l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> == l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>);      <span class="comment">// Retorna 1 se o ponteiro de próximo do sentinela apontar para ele mesmo (lista vazia)</span></div>
+<div class="line"><span class="lineno">   21</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -662,15 +655,14 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                               {</div>
-<div class="line"><span class="lineno">  107</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a> *= 2;</div>
-<div class="line"><span class="lineno">  108</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a> = (<a class="code hl_struct" href="struct_item.html">Item</a>*)realloc(f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>, f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a> * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_item.html">Item</a>));</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span>(f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a> == NULL){</div>
-<div class="line"><span class="lineno">  111</span>        printf(<span class="stringliteral">&quot;Erro ao realocar memória.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="line"><span class="lineno">  114</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                                {</div>
+<div class="line"><span class="lineno">  127</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a> *= 2;</div>
+<div class="line"><span class="lineno">  128</span>    f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a> = (<a class="code hl_struct" href="struct_item.html">Item</a>*)realloc(f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a>, f-&gt;<a class="code hl_variable" href="struct_fila.html#a002cd812923fd3fdff064342937c8de6">capacidade</a> * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_item.html">Item</a>));</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span> (f-&gt;<a class="code hl_variable" href="struct_fila.html#aed572bb35bc9f6879090ca99cc892fa1">itens</a> == NULL) {</div>
+<div class="line"><span class="lineno">  130</span>        printf(<span class="stringliteral">&quot;Erro ao realocar memória.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -688,15 +680,16 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                       {</div>
-<div class="line"><span class="lineno">   67</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;             <span class="comment">// Define o elemento a ser removido (último)</span></div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span>(temp != l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>){                   <span class="comment">// Evita a remoção do nó sentinela</span></div>
-<div class="line"><span class="lineno">   69</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;      <span class="comment">// Ajusta o ponteiro &quot;próximo&quot; do nó anterior, que apontará para o elemento seguinte</span></div>
-<div class="line"><span class="lineno">   70</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;       <span class="comment">// Ajusta o ponteiro &quot;anterior&quot; do próximo nó, que apontará para o novo anterior</span></div>
-<div class="line"><span class="lineno">   71</span>        free(temp);                        <span class="comment">// Libera a memória alocada</span></div>
-<div class="line"><span class="lineno">   72</span>        l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>--;                         <span class="comment">// Decrementa o tamanho da lista</span></div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="line"><span class="lineno">   74</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                       {</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;             <span class="comment">// Define o elemento a ser removido (último)</span></div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span>(temp != l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>){                   <span class="comment">// Evita a remoção do nó sentinela</span></div>
+<div class="line"><span class="lineno">   65</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;      <span class="comment">// Ajusta o ponteiro &quot;próximo&quot; do nó anterior, que apontará para o elemento seguinte</span></div>
+<div class="line"><span class="lineno">   66</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;       <span class="comment">// Ajusta o ponteiro &quot;anterior&quot; do próximo nó, que apontará para o novo anterior</span></div>
+<div class="line"><span class="lineno">   67</span>        free(temp-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>);                  <span class="comment">// Libera a memória da string</span></div>
+<div class="line"><span class="lineno">   68</span>        free(temp);                        <span class="comment">// Libera a memória alocada</span></div>
+<div class="line"><span class="lineno">   69</span>        l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>--;                         <span class="comment">// Decrementa o tamanho da lista</span></div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="line"><span class="lineno">   71</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -714,15 +707,58 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                       {</div>
-<div class="line"><span class="lineno">   55</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;             <span class="comment">// Define o elemento a ser removido (primeiro)</span></div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">if</span>(temp != l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>){                    <span class="comment">// Evita a remoção do nó sentinela</span></div>
-<div class="line"><span class="lineno">   57</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;       <span class="comment">// Ajusta o ponteiro &quot;próximo&quot; do nó anterior, que apontará para o elemento seguinte</span></div>
-<div class="line"><span class="lineno">   58</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;        <span class="comment">// Ajusta o ponteiro &quot;anterior&quot; do próximo nó, que apontará para o novo anterior</span></div>
-<div class="line"><span class="lineno">   59</span>        free(temp);                         <span class="comment">// Libera a memória alocada</span></div>
-<div class="line"><span class="lineno">   60</span>        l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>--;                          <span class="comment">// Decrementa o tamanho da lista</span></div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="line"><span class="lineno">   62</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                       {</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;             <span class="comment">// Define o elemento a ser removido (primeiro)</span></div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">if</span>(temp != l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>){                    <span class="comment">// Evita a remoção do nó sentinela</span></div>
+<div class="line"><span class="lineno">   53</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;       <span class="comment">// Ajusta o ponteiro &quot;próximo&quot; do nó anterior, que apontará para o elemento seguinte</span></div>
+<div class="line"><span class="lineno">   54</span>        temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;        <span class="comment">// Ajusta o ponteiro &quot;anterior&quot; do próximo nó, que apontará para o novo anterior</span></div>
+<div class="line"><span class="lineno">   55</span>        free(temp-&gt;<a class="code hl_variable" href="structnode__.html#a64df6f132f4b4d2e69c86a662b314b91">task</a>);                   <span class="comment">// Libera a memória da string</span></div>
+<div class="line"><span class="lineno">   56</span>        free(temp);                         <span class="comment">// Libera a memória alocada</span></div>
+<div class="line"><span class="lineno">   57</span>        l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>--;                          <span class="comment">// Decrementa o tamanho da lista</span></div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a61fa8d6b750970805e4cc662897fb80d" name="a61fa8d6b750970805e4cc662897fb80d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fa8d6b750970805e4cc662897fb80d">&#9670;&#160;</a></span>removerM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removerM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_lista.html">Lista</a> *</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                   {</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span>(!n || n &gt; l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>) <span class="comment">// Finaliza a função caso n seja zero ou maior que o tamanho da lista</span></div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_typedef" href="#ad0e58c8d86e5c89dc77bfde1c568971c">Node</a> *temp = l-&gt;<a class="code hl_variable" href="struct_lista.html#a8627deb587bf1d4a84f8e3f2dae86183">sent</a>;</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <span class="comment">// Se o elemento escolhido estiver antes ou na metade da lista a iteração segue no sentido do ponteiro prox,</span></div>
+<div class="line"><span class="lineno">   79</span>    <span class="comment">// e se estiver depois da metade a iteração segue pelo sentido do ponteiro ant</span></div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span>(n &lt;= l-&gt;size / 2)</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 1; i &lt;= n; i++){</div>
+<div class="line"><span class="lineno">   82</span>            temp = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt;= (l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a> - n); i++){ <span class="comment">// i começa em zero para fazer mais uma iteração</span></div>
+<div class="line"><span class="lineno">   86</span>            temp = temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>;      <span class="comment">// Ajusta o ponteiro &quot;próximo&quot; do nó anterior, que apontará para o elemento seguinte</span></div>
+<div class="line"><span class="lineno">   90</span>    temp-&gt;<a class="code hl_variable" href="structnode__.html#a24923762d5223cd3be20904952540707">prox</a>-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a> = temp-&gt;<a class="code hl_variable" href="structnode__.html#aa2fd49a828800a317680c2942ef54e4c">ant</a>;       <span class="comment">// Ajusta o ponteiro &quot;anterior&quot; do próximo nó, que apontará para o novo anterior</span></div>
+<div class="line"><span class="lineno">   91</span>    free(temp);                        <span class="comment">// Libera a memória alocada</span></div>
+<div class="line"><span class="lineno">   92</span>    l-&gt;<a class="code hl_variable" href="struct_lista.html#a245260f6f74972558f61b85227df5aae">size</a>--;</div>
+<div class="line"><span class="lineno">   93</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

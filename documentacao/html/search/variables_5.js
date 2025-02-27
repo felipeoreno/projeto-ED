@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['janela_5fprincipal_0',['janela_principal',['../interface-main_8c.html#a722d503caf3a2333e8d6292a4b885178',1,'interface-main.c']]],
-  ['janela_5ftarefas_1',['janela_tarefas',['../interface-main_8c.html#aff9bdb6ec7cb7d2119ba384c53d812a4',1,'interface-main.c']]]
+  ['list_5fbox_0',['list_box',['../main_8c.html#a0cceb33c9d0c5b9d65955e3400957903',1,'main.c']]],
+  ['lista_1',['lista',['../main_8c.html#a6bbf26eb93826aa088f0edfd09bf333f',1,'main.c']]]
 ];
